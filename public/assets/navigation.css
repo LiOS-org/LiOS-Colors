@@ -26,6 +26,7 @@
   transition: all 0.5s;
   text-align: center;
   align-items: center;
+  z-index: 11;
 }
 /* On hover effects */
 .navigation_buttons:hover{

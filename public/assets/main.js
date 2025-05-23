@@ -26,6 +26,7 @@ function displayColors(colors) {
     colors.forEach(color => {
         const entryDiv = document.createElement('div');
         entryDiv.id = 'Frosted_Background';
+        entryDiv.className = 'frosted_texture';
 
         const colorDiv = document.createElement('div');
         colorDiv.className = `color-item ${color.name}`;

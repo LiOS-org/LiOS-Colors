@@ -19,6 +19,7 @@
     border-radius: 2%;
     background: var(--Frosted_Background);
     border-radius: 2%;
+    z-index: 0;
 }
 #color-pallete{
     display: inline-block;
@@ -27,6 +28,7 @@
     margin:1%;
     padding: auto;
     border-radius: 2%;
+    z-index: 1;
 }
 #info{
     height: auto;
