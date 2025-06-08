@@ -225,6 +225,10 @@
 <hex>#2db0ce</hex>
 </color>
 <color>
+<name>Aquatic</name>
+<hex>#99c1cc</hex>
+</color>
+<color>
 <name>Aquatic Edge</name>
 <hex>#bfd6d1</hex>
 </color>
@@ -957,6 +961,10 @@
 <hex>#52b4ca</hex>
 </color>
 <color>
+<name>Blue Burst</name>
+<hex>#309cd0</hex>
+</color>
+<color>
 <name>Blue Chip</name>
 <hex>#1d5699</hex>
 </color>
@@ -1105,6 +1113,10 @@
 <hex>#4d6e2f</hex>
 </color>
 <color>
+<name>Botticelli</name>
+<hex>#b70272</hex>
+</color>
+<color>
 <name>Boulevardier</name>
 <hex>#d40701</hex>
 </color>
@@ -1134,6 +1146,10 @@
 </color>
 <color>
 <name>Breeze</name>
+<hex>#aec9ea</hex>
+</color>
+<color>
+<name>Breezy</name>
 <hex>#c2dde6</hex>
 </color>
 <color>
@@ -1285,6 +1301,10 @@
 <hex>#dbbc4b</hex>
 </color>
 <color>
+<name>Burned</name>
+<hex>#520b00</hex>
+</color>
+<color>
 <name>Burnt Coffee</name>
 <hex>#271b10</hex>
 </color>
@@ -1323,6 +1343,10 @@
 <color>
 <name>Buttercream</name>
 <hex>#efe0cd</hex>
+</color>
+<color>
+<name>Buttered</name>
+<hex>#ece2b7</hex>
 </color>
 <color>
 <name>Buttered Up</name>
@@ -1467,6 +1491,10 @@
 <color>
 <name>Candy Bar</name>
 <hex>#ffb7d5</hex>
+</color>
+<color>
+<name>Candy Cane</name>
+<hex>#f7bfc2</hex>
 </color>
 <color>
 <name>Candy Corn</name>
@@ -2557,6 +2585,10 @@
 <hex>#d70a53</hex>
 </color>
 <color>
+<name>Deep Blue</name>
+<hex>#040273</hex>
+</color>
+<color>
 <name>Deep Forest</name>
 <hex>#3c463e</hex>
 </color>
@@ -2945,6 +2977,10 @@
 <hex>#88bbee</hex>
 </color>
 <color>
+<name>Elf</name>
+<hex>#1b8a6b</hex>
+</color>
+<color>
 <name>Elite Teal</name>
 <hex>#133337</hex>
 </color>
@@ -3151,6 +3187,10 @@
 <color>
 <name>Fandango</name>
 <hex>#b53389</hex>
+</color>
+<color>
+<name>Far Horizons</name>
+<hex>#7fa2bf</hex>
 </color>
 <color>
 <name>Fat Gold</name>
@@ -3829,6 +3869,10 @@
 <hex>#fefe33</hex>
 </color>
 <color>
+<name>Girl Crush</name>
+<hex>#d1c0dc</hex>
+</color>
+<color>
 <name>Girl Power</name>
 <hex>#d39bcb</hex>
 </color>
@@ -4039,6 +4083,10 @@
 <color>
 <name>Grand Bleu</name>
 <hex>#015482</hex>
+</color>
+<color>
+<name>Grand Canyon</name>
+<hex>#a05d4d</hex>
 </color>
 <color>
 <name>Grand Sunset</name>
@@ -5617,6 +5665,10 @@
 <hex>#aacc11</hex>
 </color>
 <color>
+<name>Leafy Greens</name>
+<hex>#80bb66</hex>
+</color>
+<color>
 <name>Leafy Lemon</name>
 <hex>#c0f000</hex>
 </color>
@@ -6349,6 +6401,10 @@
 <hex>#c6d8c7</hex>
 </color>
 <color>
+<name>Marshland</name>
+<hex>#2b2e26</hex>
+</color>
+<color>
 <name>Marshmallow</name>
 <hex>#f0eee4</hex>
 </color>
@@ -6877,6 +6933,10 @@
 <hex>#b67267</hex>
 </color>
 <color>
+<name>Morrel</name>
+<hex>#ac8f6c</hex>
+</color>
+<color>
 <name>Morris Leaf</name>
 <hex>#c2d3af</hex>
 </color>
@@ -7251,6 +7311,10 @@
 <color>
 <name>Night Rider</name>
 <hex>#332e2e</hex>
+</color>
+<color>
+<name>Night Shift</name>
+<hex>#2a5c6a</hex>
 </color>
 <color>
 <name>Night Sky</name>
@@ -8305,6 +8369,10 @@
 <hex>#ff007e</hex>
 </color>
 <color>
+<name>Pink Porky</name>
+<hex>#ee9091</hex>
+</color>
+<color>
 <name>Pink Pride</name>
 <hex>#ef1de7</hex>
 </color>
@@ -8469,6 +8537,10 @@
 <hex>#eae9e0</hex>
 </color>
 <color>
+<name>Polar Glow</name>
+<hex>#5097fc</hex>
+</color>
+<color>
 <name>Polar Wind</name>
 <hex>#b4dfed</hex>
 </color>
@@ -8523,6 +8595,10 @@
 <color>
 <name>Pool Water</name>
 <hex>#2188ff</hex>
+</color>
+<color>
+<name>Poolside</name>
+<hex>#bee0e2</hex>
 </color>
 <color>
 <name>Pop That Gum</name>
@@ -8689,6 +8765,10 @@
 <hex>#96711c</hex>
 </color>
 <color>
+<name>Pumpernickel</name>
+<hex>#6c462d</hex>
+</color>
+<color>
 <name>Pumpkin</name>
 <hex>#ff7518</hex>
 </color>
@@ -8733,6 +8813,10 @@
 <hex>#322c56</hex>
 </color>
 <color>
+<name>Purple Patch</name>
+<hex>#5c2e88</hex>
+</color>
+<color>
 <name>Purple Prose</name>
 <hex>#543254</hex>
 </color>
@@ -8763,6 +8847,10 @@
 <color>
 <name>Queer Blue</name>
 <hex>#88ace0</hex>
+</color>
+<color>
+<name>Quercitron</name>
+<hex>#e5b03d</hex>
 </color>
 <color>
 <name>Quick-Freeze</name>
@@ -8973,7 +9061,11 @@
 <hex>#cc1133</hex>
 </color>
 <color>
-<name>Redolency</name>
+<name>Red-Handed</name>
+<hex>#dd2233</hex>
+</color>
+<color>
+<name>Redolenc</name>
 <hex>#ea8a7a</hex>
 </color>
 <color>
@@ -8983,6 +9075,10 @@
 <color>
 <name>RedЯum</name>
 <hex>#ff2200</hex>
+</color>
+<color>
+<name>Rendez-Blue</name>
+<hex>#abbed0</hex>
 </color>
 <color>
 <name>Restful Rain</name>
@@ -9217,6 +9313,10 @@
 <hex>#4575ad</hex>
 </color>
 <color>
+<name>Sailing</name>
+<hex>#869cbb</hex>
+</color>
+<color>
 <name>Sailor</name>
 <hex>#445780</hex>
 </color>
@@ -9299,6 +9399,10 @@
 <color>
 <name>Sand Ripples</name>
 <hex>#c1b7b0</hex>
+</color>
+<color>
+<name>Sand Storm</name>
+<hex>#f9f1d7</hex>
 </color>
 <color>
 <name>Sandstorm</name>
@@ -9469,6 +9573,10 @@
 <hex>#6b6d6a</hex>
 </color>
 <color>
+<name>Shallot Peel</name>
+<hex>#eec378</hex>
+</color>
+<color>
 <name>Shallow Sea</name>
 <hex>#9ab8c2</hex>
 </color>
@@ -9507,6 +9615,10 @@
 <color>
 <name>Shōji</name>
 <hex>#ded5c7</hex>
+</color>
+<color>
+<name>Shore</name>
+<hex>#81d5c6</hex>
 </color>
 <color>
 <name>Shortbread</name>
@@ -9669,7 +9781,7 @@
 <hex>#a7c2eb</hex>
 </color>
 <color>
-<name>Skydiver</name>
+<name>Skydive</name>
 <hex>#83acd3</hex>
 </color>
 <color>
@@ -9809,6 +9921,10 @@
 <hex>#f4b435</hex>
 </color>
 <color>
+<name>Solar Relic</name>
+<hex>#d2ab51</hex>
+</color>
+<color>
 <name>Solar Storm</name>
 <hex>#ffc16c</hex>
 </color>
@@ -9845,6 +9961,10 @@
 <hex>#ffeea5</hex>
 </color>
 <color>
+<name>Sour Lime</name>
+<hex>#acc326</hex>
+</color>
+<color>
 <name>Sour Yellow</name>
 <hex>#eeff04</hex>
 </color>
@@ -9867,6 +9987,10 @@
 <color>
 <name>Space Opera</name>
 <hex>#5511dd</hex>
+</color>
+<color>
+<name>Spacescape</name>
+<hex>#222255</hex>
 </color>
 <color>
 <name>Sparky Blue</name>
@@ -9921,6 +10045,10 @@
 <hex>#f3d48b</hex>
 </color>
 <color>
+<name>Squid’s Ink</name>
+<hex>#041330</hex>
+</color>
+<color>
 <name>Star</name>
 <hex>#ffe500</hex>
 </color>
@@ -9931,6 +10059,10 @@
 <color>
 <name>Star of Life</name>
 <hex>#057bc1</hex>
+</color>
+<color>
+<name>Stargazer</name>
+<hex>#3f5865</hex>
 </color>
 <color>
 <name>Stargazing</name>
@@ -10153,6 +10285,10 @@
 <hex>#b29700</hex>
 </color>
 <color>
+<name>Sunken Ship</name>
+<hex>#10252a</hex>
+</color>
+<color>
 <name>Sunlight</name>
 <hex>#ebcd95</hex>
 </color>
@@ -10195,6 +10331,10 @@
 <color>
 <name>Super Silver</name>
 <hex>#eeeeee</hex>
+</color>
+<color>
+<name>Superstar</name>
+<hex>#ffcc11</hex>
 </color>
 <color>
 <name>Surgical</name>
@@ -10409,6 +10549,10 @@
 <hex>#e1583f</hex>
 </color>
 <color>
+<name>Timid White</name>
+<hex>#d9d6cf</hex>
+</color>
+<color>
 <name>Tin</name>
 <hex>#919191</hex>
 </color>
@@ -10427,6 +10571,10 @@
 <color>
 <name>Toadstool</name>
 <hex>#b8282f</hex>
+</color>
+<color>
+<name>Toasted Husk</name>
+<hex>#ed8a53</hex>
 </color>
 <color>
 <name>Tobacco</name>
@@ -10597,6 +10745,10 @@
 <hex>#2b888d</hex>
 </color>
 <color>
+<name>Turnip Crown</name>
+<hex>#bb9ecd</hex>
+</color>
+<color>
 <name>Turquoise</name>
 <hex>#06c2ac</hex>
 </color>
@@ -10665,6 +10817,14 @@
 <hex>#ff2f92</hex>
 </color>
 <color>
+<name>Untamed Red</name>
+<hex>#dd0022</hex>
+</color>
+<color>
+<name>Upset Tomato</name>
+<hex>#b52923</hex>
+</color>
+<color>
 <name>Urban Chic</name>
 <hex>#424c4a</hex>
 </color>
@@ -10711,6 +10871,10 @@
 <color>
 <name>Vapor Trail</name>
 <hex>#f5eedf</hex>
+</color>
+<color>
+<name>Vaporized</name>
+<hex>#cbf4f8</hex>
 </color>
 <color>
 <name>Vaporwave</name>
@@ -10913,6 +11077,10 @@
 <hex>#152eff</hex>
 </color>
 <color>
+<name>Vivid Green</name>
+<hex>#2fef10</hex>
+</color>
+<color>
 <name>Vivid Orange</name>
 <hex>#ff5f00</hex>
 </color>
@@ -10985,7 +11153,7 @@
 <hex>#ba0033</hex>
 </color>
 <color>
-<name>Warm Ash</name>
+<name>Warm Ashes</name>
 <hex>#cfc9c7</hex>
 </color>
 <color>
@@ -11457,6 +11625,10 @@
 <hex>#e6e382</hex>
 </color>
 <color>
+<name>Yellow Tang</name>
+<hex>#ffd300</hex>
+</color>
+<color>
 <name>Yellowish</name>
 <hex>#faee66</hex>
 </color>
@@ -11530,7 +11702,7 @@
 </color>
 <color>
 <name>Zombie</name>
-<hex>#6a755a</hex>
+<hex>#dadead</hex>
 </color>
 <color>
 <name>Zoodles</name>

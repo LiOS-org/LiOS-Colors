@@ -29,7 +29,7 @@
     "test:watch": "vitest",
     "build": "node scripts/build.js && npm run prettier && npm run build-translucent-colors",
     "deploy": "npm run build && firebase deploy",
-    "prettier": "prettier --write ./dist/*",
+    "prettier": "prettier --write ./public/dist/*",
     "lint": "npm run lint:scripts && npm run lint:markdown",
     "lint:scripts": "eslint ./scripts",
     "lint:markdown": "markdownlint-cli2 '**/*.md' '#node_modules'",
