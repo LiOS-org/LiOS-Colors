@@ -20,13 +20,20 @@
   justify-content: space-around;
   padding: 10px;
   border-radius: 5px;
-  font-size: 30px;
-  height: 50px;
   min-width: 100px;
   transition: all 0.5s;
   text-align: center;
   align-items: center;
   z-index: 11;
+  flex-direction: column;
+}
+.navigation_buttons svg{
+  display: flex;
+  height: 40px;
+}
+.navigation_buttons .navigation_icon_name{
+  display: flex;
+  font-size: 18px;
 }
 /* On hover effects */
 .navigation_buttons:hover{
@@ -35,6 +42,10 @@
   transition: all 0.5s;
 }
 .navigation_buttons:hover  .navigation_icon{
+  color: var(--primary);
+  transition: all 0.5s;
+}
+.navigation_buttons:hover .navigation_icon_name{
   color: var(--primary);
   transition: all 0.5s;
 }

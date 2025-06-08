@@ -28,6 +28,7 @@
     "test": "npm run test:precommit && npm run build && vitest run",
     "test:watch": "vitest",
     "build": "node scripts/build.js && npm run prettier && npm run build-translucent-colors",
+    "deploy": "npm run build && firebase deploy",
     "prettier": "prettier --write ./dist/*",
     "lint": "npm run lint:scripts && npm run lint:markdown",
     "lint:scripts": "eslint ./scripts",
