@@ -9,6 +9,7 @@
   background: var(--Frosted_Background);
   transition: opacity 0.5s ease;
   z-index: 10;
+  flex-direction: row;
 }
 .navigation_icon{
   height: 50px;
