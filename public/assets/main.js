@@ -26,7 +26,7 @@ function displayColors(colors) {
     colors.forEach(color => {
         const entryDiv = document.createElement('div');
         entryDiv.id = 'Frosted_Background';
-        entryDiv.className = 'frosted_texture';
+        entryDiv.className = 'frosted_texture mouse_cursor_gradient_tracking';
 
         const colorDiv = document.createElement('div');
         colorDiv.className = `color-item ${color.name}`;

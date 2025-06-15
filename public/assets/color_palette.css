@@ -5,5 +5,10 @@
     --quaternary:#91eae4;
     --white:#eeded8;
     --black:#25212a;
+    /* Frosted colors */
     --Frosted_Background:var(--e4eeeb);
+    --frosted_primary:var(--ff91d4);
+    --frosted_secondary:var(--8c52ff);
+    --frosted_tertiary:var(--86a8e7);
+    --frosted_quaternary:var(--91eae4);
 }
