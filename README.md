@@ -12,7 +12,7 @@ The list of supported colors can be found in **colornames.csv** or can be browse
 
 This project is not built with a purpose of accepting contributions that's why there are **no documentations, no automated build scripts and even the original build script has been modified**. 
 
-If you want to add a new color, you are recommended to directly add it to upstream, LiOS-Colors automatically sources it and if you want to do any other changes you are still welcome and there are no restrictions.
+If you want to add a new color are recommended to directly add it to upstream, LiOS-Colors automatically sources it and if you want to do any other changes you are still welcome and there are no restrictions.
 
 ## Licensing information
 
