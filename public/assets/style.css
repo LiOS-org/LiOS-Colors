@@ -87,3 +87,8 @@
     color: var(--white);
     display: block;
 }
+.for_seo p{
+    max-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}

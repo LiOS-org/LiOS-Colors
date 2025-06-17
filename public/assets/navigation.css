@@ -21,7 +21,7 @@
   justify-content: space-around;
   padding: 10px;
   border-radius: 5px;
-  min-width: 100px;
+  min-width: max-content;
   transition: all 0.5s;
   text-align: center;
   align-items: center;
