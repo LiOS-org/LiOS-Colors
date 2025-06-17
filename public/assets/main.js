@@ -1,11 +1,15 @@
+const INITIAL_LOAD_COUNT = 20;
+let currentIndex = 0;
 let colorData = [];
 
 // Fetch and load all color data from dist/colornames.json
 fetch('dist/colornames.json')
     .then(response => response.json())
     .then(data => {
-        colorData = shuffleArray(data);  // Shuffle the colors before displaying
-        displayColors(colorData);  // Show all colors by default when the page loads
+        colorData = shuffleArray(data);
+        currentIndex = INITIAL_LOAD_COUNT;
+        displayColors(colorData.slice(0, INITIAL_LOAD_COUNT));
+        setupInfiniteScroll();  // Attach scroll listener
     })
     .catch(error => console.error('Error fetching color data:', error));
 
@@ -19,9 +23,9 @@ function showShades(baseColor) {
 }
 
 // Function to display colors (used both to show all colors by default and filtered results)
-function displayColors(colors) {
+function displayColors(colors, append = false) {
     const paletteContainer = document.getElementById('main-container');
-    paletteContainer.innerHTML = '';  // Clear previous content
+    if (!append) paletteContainer.innerHTML = '';  // Clear only if not appending
 
     colors.forEach(color => {
         const entryDiv = document.createElement('div');
@@ -57,8 +61,9 @@ function searchColors() {
     const filteredColors = colorData.filter(color =>
         color.name.toLowerCase().includes(query) || color.hex.toLowerCase().includes(query)
     );
-    document.getElementById('main-container').innerHTML = '';  // Clear existing colors
-    displayColors(filteredColors);  // Show filtered results
+    currentIndex = filteredColors.length;
+    document.getElementById('main-container').innerHTML = '';
+    displayColors(filteredColors);
 }
 
 // Fisher-Yates Shuffle Algorithm to randomize the colors array
@@ -68,4 +73,18 @@ function shuffleArray(array) {
         [array[i], array[j]] = [array[j], array[i]];  // Swap elements
     }
     return array;
+}
+
+function loadMoreColors() {
+    const nextColors = colorData.slice(currentIndex, currentIndex + INITIAL_LOAD_COUNT);
+    displayColors(nextColors, true);
+    currentIndex += INITIAL_LOAD_COUNT;
+}
+
+function setupInfiniteScroll() {
+    window.addEventListener('scroll', () => {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+            loadMoreColors();
+        }
+    });
 }

@@ -25,7 +25,6 @@
     "commit": "git-cz",
     "pull-colors": "curl -L 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQube6Y0wHyEtJnjg0eU3N7VseoxVnD4L9uDqvWZdl_tzzrHDVN10IPP7cdFipX8j70atNMLfPCB0Q6/pub?gid=40578722&single=true&output=csv' -o src/colornames.csv",
     "test": "npm run test:precommit && npm run build && vitest run",
-    "test": "npm run test:precommit && npm run build && vitest run",
     "test:watch": "vitest",
     "build": "node scripts/build.js && npm run prettier && npm run build-translucent-colors",
     "deploy": "npm run build && firebase deploy",
@@ -94,5 +93,10 @@
       "type": "github-sponsors",
       "url": "https://github.com/sponsors/meodai"
     }
-  ]
+  ],
+  "dependencies": {
+    "cheerio": "^1.1.0",
+    "fs": "^0.0.1-security",
+    "prettify-xml": "^1.2.0"
+  }
 }

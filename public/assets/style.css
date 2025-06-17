@@ -79,3 +79,11 @@
 .rainbow-swatch:hover {
     border-color: #000;
 }
+/* For SEO */
+.for_seo{
+    border-radius: 100vw;
+    background: var(--Frosted_Background);
+    text-align: center;
+    color: var(--white);
+    display: block;
+}
