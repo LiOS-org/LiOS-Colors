@@ -14,21 +14,26 @@
     display: inline-block;
     height: 300px;
     width: 325px;
-    padding: auto;
     margin: 5px;
     border-radius: 2%;
     background: var(--Frosted_Background);
     border-radius: 2%;
     z-index: 0;
+    transition: all 0.3s ease-in-out;
+}
+#main-container #Frosted_Background:hover{
+    background: var(--frosted_secondary);
+    transition: all 0.3s ease-in-out;
+    scale: 1.05;
+    color: var(--primary);
 }
 #color-pallete{
     display: inline-block;
     height: 200px;
     width: 98%;
     margin:1%;
-    padding: auto;
     border-radius: 2%;
-    z-index: 1;
+    z-index: 2;
 }
 #info{
     height: auto;

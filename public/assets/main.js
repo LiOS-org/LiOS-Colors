@@ -30,7 +30,7 @@ function displayColors(colors, append = false) {
     colors.forEach(color => {
         const entryDiv = document.createElement('div');
         entryDiv.id = 'Frosted_Background';
-        entryDiv.className = 'frosted_texture mouse_cursor_gradient_tracking';
+        entryDiv.className = 'frosted_texture';
 
         const colorDiv = document.createElement('div');
         colorDiv.className = `color-item ${color.name}`;
@@ -46,6 +46,7 @@ function displayColors(colors, append = false) {
         const hexDiv = document.createElement('div');
         hexDiv.id = 'hex';
         hexDiv.textContent = color.hex;
+        
 
         infoDiv.appendChild(nameDiv);
         infoDiv.appendChild(hexDiv);

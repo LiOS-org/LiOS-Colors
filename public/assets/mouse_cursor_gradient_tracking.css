@@ -1,3 +1,12 @@
-.mouse_cursor_gradient_tracking::before {
-    background: radial-gradient(circle closest-side,var(--secondary), transparent 80%);
+:root {
+    --mouse_cursor_gradient_tracking: var(--secondary);
+}
+#tracking_overlay{
+    z-index: 1;
+    background: red;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: block;
 }
