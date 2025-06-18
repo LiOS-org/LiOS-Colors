@@ -23076,6 +23076,7 @@
     { name: 'Ruby Fire', hex: '#f20769' },
     { name: 'Ruby Grey', hex: '#73525c' },
     { name: 'Ruby Lips', hex: '#813e45' },
+    { name: 'Ruby Passion', hex: '#c41a3b' },
     { name: 'Ruby Queen', hex: '#b0063d' },
     { name: 'Ruby Red', hex: '#9b111e' },
     { name: 'Ruby Ring', hex: '#a03d41' },
