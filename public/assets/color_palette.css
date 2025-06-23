@@ -7,8 +7,11 @@
     --black:#25212a;
     /* Frosted colors */
     --Frosted_Background:var(--e4eeeb);
-    --frosted_primary:var(--ff91d4);
+    --frosted_primary:var(--cc338b);
     --frosted_secondary:var(--8c52ff);
     --frosted_tertiary:var(--86a8e7);
     --frosted_quaternary:var(--91eae4);
+    /* Scrollbar */
+    --scrollbar_thumb:var(--e4eeeb);
+    --scrollbar_thumb_hover:var(--frosted_primary);
 }
