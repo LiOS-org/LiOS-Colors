@@ -20,6 +20,7 @@
     border-radius: 2%;
     z-index: 0;
     transition: all 0.3s ease-in-out;
+    justify-content: space-around;
 }
 #main-container #Frosted_Background:hover{
     background: var(--frosted_secondary);
@@ -46,6 +47,24 @@
 #hex{
     font-size: 20px;
     text-align: center;
+}
+.copy-btn{
+    width: max-content;
+    margin-left: 50%;
+    margin-right: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    outline: none;
+    background: var(--Frosted_Background);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.copy-btn:hover{
+    background: var(--frosted_primary);
+    color: var(--white);
+    transition: all 0.3s ease-in-out;
 }
 #search-bar{
     display: block;

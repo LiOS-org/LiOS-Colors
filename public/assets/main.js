@@ -50,6 +50,18 @@ function displayColors(colors, append = false) {
 
         infoDiv.appendChild(nameDiv);
         infoDiv.appendChild(hexDiv);
+
+        // Add a copy button for the hex value
+        const copyBtn = document.createElement('button');
+        copyBtn.textContent = 'Copy';
+        copyBtn.className = 'copy-btn frosted_background frosted_texture';
+        copyBtn.onclick = () => {
+            navigator.clipboard.writeText(color.hex);
+            copyBtn.textContent = 'Copied!';
+            setTimeout(() => copyBtn.textContent = 'Copy', 1000);
+        };
+        infoDiv.appendChild(copyBtn);
+
         entryDiv.appendChild(colorDiv);
         entryDiv.appendChild(infoDiv);
         paletteContainer.appendChild(entryDiv);
