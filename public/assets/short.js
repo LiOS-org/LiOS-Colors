@@ -22,6 +22,19 @@ function showShades(baseColor) {
     displayColors(shades);  // Display the shades of the selected color
 }
 
+// Hex to RGB conversion utility
+function hexToRGB(hex) {
+    let parsedHex = hex.replace('#', '');
+    if (parsedHex.length === 3) {
+        parsedHex = parsedHex.split('').map(c => c + c).join('');
+    }
+    const bigint = parseInt(parsedHex, 16);
+    const r = (bigint >> 16) & 255;
+    const g = (bigint >> 8) & 255;
+    const b = bigint & 255;
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
 // Function to display colors (used both to show all colors by default and filtered results)
 function displayColors(colors, append = false) {
     const paletteContainer = document.getElementById('main-container');
@@ -29,8 +42,7 @@ function displayColors(colors, append = false) {
 
     colors.forEach(color => {
         const entryDiv = document.createElement('div');
-        entryDiv.id = 'Frosted_Background';
-        entryDiv.className = 'frosted_texture mouse_cursor_gradient_tracking';
+        entryDiv.className = 'frosted_texture frosted_background';
 
         const colorDiv = document.createElement('div');
         colorDiv.className = `color-item ${color.name}`;
@@ -45,10 +57,39 @@ function displayColors(colors, append = false) {
 
         const hexDiv = document.createElement('div');
         hexDiv.id = 'hex';
+        hexDiv.className = 'copyable';
         hexDiv.textContent = color.hex;
+
+        const hexCopyBtn = document.createElement('button');
+        hexCopyBtn.textContent = 'Copy Hex';
+        hexCopyBtn.className = 'copy-btn frosted_background frosted_texture';
+        hexCopyBtn.onclick = () => {
+            navigator.clipboard.writeText(color.hex);
+            hexCopyBtn.textContent = 'Copied!';
+            setTimeout(() => hexCopyBtn.textContent = 'Copy Hex', 1000);
+        };
+
+        const rgb = hexToRGB(color.hex);
+        const rgbDiv = document.createElement('div');
+        rgbDiv.id = 'rgb';
+        rgbDiv.className = 'copyable';
+        rgbDiv.textContent = rgb;
+
+        const rgbCopyBtn = document.createElement('button');
+        rgbCopyBtn.textContent = 'Copy RGB';
+        rgbCopyBtn.className = 'copy-btn frosted_background frosted_texture';
+        rgbCopyBtn.onclick = () => {
+            navigator.clipboard.writeText(rgb);
+            rgbCopyBtn.textContent = 'Copied!';
+            setTimeout(() => rgbCopyBtn.textContent = 'Copy RGB', 1000);
+        };
 
         infoDiv.appendChild(nameDiv);
         infoDiv.appendChild(hexDiv);
+        infoDiv.appendChild(hexCopyBtn);
+        infoDiv.appendChild(rgbDiv);
+        infoDiv.appendChild(rgbCopyBtn);
+
         entryDiv.appendChild(colorDiv);
         entryDiv.appendChild(infoDiv);
         paletteContainer.appendChild(entryDiv);
