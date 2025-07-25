@@ -10,9 +10,9 @@
     50% { background-position: 100% 100%; }
     100% { background-position: 0% 0%; }
 }
-#main-container #Frosted_Background{
+#main-container .frosted_background{
     display: inline-block;
-    height: 300px;
+    height: 400px;
     width: 325px;
     margin: 5px;
     border-radius: 2%;
@@ -20,9 +20,9 @@
     border-radius: 2%;
     z-index: 0;
     transition: all 0.3s ease-in-out;
-    justify-content: space-around;
+    align-items: center;
 }
-#main-container #Frosted_Background:hover{
+#main-container .frosted_background:hover{
     background: var(--frosted_secondary);
     transition: all 0.3s ease-in-out;
     scale: 1.05;
@@ -37,31 +37,35 @@
     z-index: 2;
 }
 #info{
+    display: flex;
     height: auto;
     width: 100%;
+    flex-direction: column;
 }
 #name{
     font-size: 26px;
     text-align: center;
 }
-#hex{
+#hex,#rgb{
     font-size: 20px;
     text-align: center;
 }
-.copy-btn{
-    width: max-content;
-    margin-left: 50%;
-    margin-right: 50%;
-    transform: translateX(-50%);
+button.copy-btn{
+    display: block;
+    max-width: 90%;
+    max-height: fit-content;
+    margin-left: 5%;
+    margin-right: 5%;
+    transform: translateX(4%);
     font-size: 18px;
     outline: none;
     background: var(--Frosted_Background);
     border: none;
-    border-radius: 5px;
+    border-radius: 5vh;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
-.copy-btn:hover{
+button.copy-btn:hover{
     background: var(--frosted_primary);
     color: var(--white);
     transition: all 0.3s ease-in-out;

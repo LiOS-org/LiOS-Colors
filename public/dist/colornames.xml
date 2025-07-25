@@ -1557,6 +1557,10 @@
 <hex>#886600</hex>
 </color>
 <color>
+<name>Alligator Alley</name>
+<hex>#c5d17b</hex>
+</color>
+<color>
 <name>Alligator Egg</name>
 <hex>#eaeed7</hex>
 </color>
@@ -7793,6 +7797,10 @@
 <hex>#bcafa2</hex>
 </color>
 <color>
+<name>Barista’s Favorite</name>
+<hex>#bb8d4e</hex>
+</color>
+<color>
 <name>Barite</name>
 <hex>#9e7b5c</hex>
 </color>
@@ -9323,6 +9331,10 @@
 <color>
 <name>Berries and Cream</name>
 <hex>#9e6a75</hex>
+</color>
+<color>
+<name>Berries Galore</name>
+<hex>#ab7cb4</hex>
 </color>
 <color>
 <name>Berries n Cream</name>
@@ -11017,6 +11029,10 @@
 <hex>#b8524b</hex>
 </color>
 <color>
+<name>Blazing</name>
+<hex>#e94e41</hex>
+</color>
+<color>
 <name>Blazing Autumn</name>
 <hex>#f3ad63</hex>
 </color>
@@ -11191,6 +11207,10 @@
 <color>
 <name>Blind Forest</name>
 <hex>#223300</hex>
+</color>
+<color>
+<name>Blindfolded</name>
+<hex>#5a5e61</hex>
 </color>
 <color>
 <name>Bling Bling</name>
@@ -24177,6 +24197,10 @@
 <hex>#6f0c0d</hex>
 </color>
 <color>
+<name>Coffee Cake</name>
+<hex>#b5987f</hex>
+</color>
+<color>
 <name>Coffee Clay</name>
 <hex>#b7997c</hex>
 </color>
@@ -26087,6 +26111,10 @@
 <color>
 <name>Cotton Cloth</name>
 <hex>#faf4d4</hex>
+</color>
+<color>
+<name>Cotton Clouds</name>
+<hex>#c2e1ec</hex>
 </color>
 <color>
 <name>Cotton Club</name>
@@ -46065,14 +46093,6 @@
 <hex>#880066</hex>
 </color>
 <color>
-<name>Grapevine</name>
-<hex>#b194a6</hex>
-</color>
-<color>
-<name>Grapevine Canyon</name>
-<hex>#62534f</hex>
-</color>
-<color>
 <name>Grapewood</name>
 <hex>#4c475e</hex>
 </color>
@@ -48779,6 +48799,10 @@
 <color>
 <name>Hanging Moss</name>
 <hex>#5c7f76</hex>
+</color>
+<color>
+<name>Hanging Vine</name>
+<hex>#6e897d</hex>
 </color>
 <color>
 <name>Hannover Hills</name>
@@ -53127,6 +53151,10 @@
 <color>
 <name>Imperial Jewel</name>
 <hex>#693e42</hex>
+</color>
+<color>
+<name>Imperial Lilac</name>
+<hex>#a99fcf</hex>
 </color>
 <color>
 <name>Imperial Palace</name>
@@ -75199,6 +75227,10 @@
 <color>
 <name>Olm Pink</name>
 <hex>#ffe6e2</hex>
+</color>
+<color>
+<name>Olo</name>
+<hex>#84fbce</hex>
 </color>
 <color>
 <name>Olympia Ivy</name>

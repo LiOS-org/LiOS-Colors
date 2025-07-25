@@ -153,6 +153,10 @@
 <hex>#886600</hex>
 </color>
 <color>
+<name>Alligator Alley</name>
+<hex>#c5d17b</hex>
+</color>
+<color>
 <name>Almond</name>
 <hex>#eddcc8</hex>
 </color>
@@ -817,6 +821,10 @@
 <hex>#ee1133</hex>
 </color>
 <color>
+<name>Barista’s Favorite</name>
+<hex>#bb8d4e</hex>
+</color>
+<color>
 <name>Bark</name>
 <hex>#5f5854</hex>
 </color>
@@ -883,6 +891,10 @@
 <color>
 <name>Bay</name>
 <hex>#b3e2d3</hex>
+</color>
+<color>
+<name>Bay Leaf</name>
+<hex>#86793d</hex>
 </color>
 <color>
 <name>Bay View</name>
@@ -1047,6 +1059,10 @@
 <color>
 <name>Bermuda Onion</name>
 <hex>#9d5a8f</hex>
+</color>
+<color>
+<name>Berries Galore</name>
+<hex>#ab7cb4</hex>
 </color>
 <color>
 <name>Berries n Cream</name>
@@ -1333,6 +1349,10 @@
 <hex>#3356aa</hex>
 </color>
 <color>
+<name>Blazing</name>
+<hex>#e94e41</hex>
+</color>
+<color>
 <name>Blazing Dragonfruit</name>
 <hex>#ff0054</hex>
 </color>
@@ -1355,6 +1375,10 @@
 <color>
 <name>Bleu Ciel</name>
 <hex>#007ba1</hex>
+</color>
+<color>
+<name>Blindfolded</name>
+<hex>#5a5e61</hex>
 </color>
 <color>
 <name>Blinking Terminal</name>
@@ -3411,6 +3435,10 @@
 <color>
 <name>Cotton Candy Explosions</name>
 <hex>#dd22ff</hex>
+</color>
+<color>
+<name>Cotton Clouds</name>
+<hex>#c2e1ec</hex>
 </color>
 <color>
 <name>Cotton Field</name>
@@ -7979,6 +8007,10 @@
 <color>
 <name>Imperial Ivory</name>
 <hex>#f1e8d2</hex>
+</color>
+<color>
+<name>Imperial Lilac</name>
+<hex>#a99fcf</hex>
 </color>
 <color>
 <name>Imperial Purple</name>

@@ -589,6 +589,10 @@
 <hex>#b3e2d3</hex>
 </color>
 <color>
+<name>Bay Leaf</name>
+<hex>#86793d</hex>
+</color>
+<color>
 <name>Bay View</name>
 <hex>#6a819e</hex>
 </color>
@@ -889,8 +893,16 @@
 <hex>#8b9cac</hex>
 </color>
 <color>
+<name>Blazing</name>
+<hex>#e94e41</hex>
+</color>
+<color>
 <name>Bleu Ciel</name>
 <hex>#007ba1</hex>
+</color>
+<color>
+<name>Blindfolded</name>
+<hex>#5a5e61</hex>
 </color>
 <color>
 <name>Blond</name>
