@@ -1,0 +1,47 @@
+.pebble_navigation_container_bottom{
+    display: flex;
+    position: fixed;
+    bottom:5%;
+    margin-left: 50%;
+    margin-right: auto;
+    max-width: 300px;
+    transform: translateX(-50%);
+    width: 95%;
+    justify-content: space-between;
+}
+.pebble{
+    color: var(--secondary);
+    text-align: center;
+    font-size: 18px;
+    border-radius: 100vh;
+    background: var(--frosted_white);
+    height: 50px;
+    width: 50px;
+    transition: all 0.5s;
+}
+.pebble:hover{
+  background: var(--frosted_secondary);
+  color: var(--primary);
+  transition: all 0.5s;
+}
+#search-bar:hover::placeholder{
+  background: var(--frosted_secondary);
+  color: var(--primary);
+  transition: all 0.5s;
+}
+.pebble svg{
+    height: 45px;
+    width: 45px;
+    padding: 2.5px;
+}
+#search-bar{
+    outline: none;
+    border: none;
+    width: 60%;
+}
+#search-bar::placeholder{
+    color: var(--secondary);
+}
+#search-bar:focus{
+    outline: none;
+}

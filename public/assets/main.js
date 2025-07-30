@@ -1,25 +1,100 @@
 const INITIAL_LOAD_COUNT = 20;
 let currentIndex = 0;
-let colorData = [];
+let allColorData = [];
+let bestOfColorData = [];
+let shortColorData = [];
+let currentColorData = [];
+let filteredColorData = []; // Store current filtered results
+let currentFilter = 'all';
+let isFiltering = false; // Track if we're in a filtered state
 
-// Fetch and load all color data from dist/colornames.json
-fetch('dist/colornames.json')
-    .then(response => response.json())
-    .then(data => {
-        colorData = shuffleArray(data);
-        currentIndex = INITIAL_LOAD_COUNT;
-        displayColors(colorData.slice(0, INITIAL_LOAD_COUNT));
-        setupInfiniteScroll();  // Attach scroll listener
-    })
-    .catch(error => console.error('Error fetching color data:', error));
+// Fetch all three datasets
+Promise.all([
+    fetch('dist/colornames.json').then(response => response.json()),
+    fetch('dist/colornames.bestof.json').then(response => response.json()),
+    fetch('dist/colornames.short.json').then(response => response.json())
+])
+.then(([allData, bestOfData, shortData]) => {
+    allColorData = shuffleArray(allData);
+    bestOfColorData = shuffleArray(bestOfData);
+    shortColorData = shuffleArray(shortData);
+    
+    // Set initial data based on current filter
+    currentColorData = allColorData;
+    currentIndex = INITIAL_LOAD_COUNT;
+    displayColors(currentColorData.slice(0, INITIAL_LOAD_COUNT));
+    setupInfiniteScroll();
+})
+.catch(error => console.error('Error fetching color data:', error));
+
+// Function to set filter type
+function setFilter(filterType) {
+    isFiltering = false;
+    currentFilter = filterType;
+    
+    // Update button states
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    document.getElementById('filter-' + filterType).classList.add('active');
+    
+    // Set the appropriate data source
+    switch(filterType) {
+        case 'all':
+            currentColorData = allColorData;
+            break;
+        case 'best':
+            currentColorData = bestOfColorData;
+            break;
+        case 'short':
+            currentColorData = shortColorData;
+            break;
+    }
+    
+    // Reset and display colors
+    currentIndex = INITIAL_LOAD_COUNT;
+    displayColors(currentColorData.slice(0, INITIAL_LOAD_COUNT));
+}
 
 // Function to show shades of the selected color
 function showShades(baseColor) {
-    // Filter the colorData array to get shades of the selected base color
-    const shades = colorData.filter(color => color.name.toLowerCase().includes(baseColor.toLowerCase()));
+    isFiltering = true;
+    // More accurate color filtering
+    const colorKeywords = {
+        'red': ['red', 'crimson', 'scarlet', 'cherry', 'rose', 'ruby', 'burgundy', 'maroon', 'coral', 'salmon', 'pink'],
+        'orange': ['orange', 'amber', 'tangerine', 'peach', 'apricot', 'coral', 'rust', 'copper', 'bronze'],
+        'yellow': ['yellow', 'gold', 'lemon', 'cream', 'ivory', 'wheat', 'honey', 'butter', 'champagne', 'blonde'],
+        'green': ['green', 'lime', 'mint', 'sage', 'olive', 'forest', 'emerald', 'jade', 'teal', 'pine', 'moss'],
+        'blue': ['blue', 'azure', 'navy', 'royal', 'sky', 'ocean', 'sapphire', 'cobalt', 'steel', 'powder', 'cyan'],
+        'indigo': ['indigo', 'purple', 'violet', 'plum', 'grape', 'lavender', 'amethyst', 'orchid'],
+        'violet': ['violet', 'purple', 'plum', 'grape', 'lavender', 'amethyst', 'orchid', 'magenta', 'fuchsia'],
+        'purple': ['purple', 'violet', 'plum', 'grape', 'lavender', 'amethyst', 'orchid', 'magenta', 'fuchsia', 'indigo'],
+        'pink': ['pink', 'rose', 'blush', 'salmon', 'coral', 'fuchsia', 'magenta', 'rouge'],
+        'brown': ['brown', 'tan', 'beige', 'coffee', 'chocolate', 'chestnut', 'mahogany', 'sienna', 'umber'],
+        'gray': ['gray', 'grey', 'silver', 'charcoal', 'slate', 'ash', 'steel', 'pewter', 'smoke'],
+        'black': ['black', 'charcoal', 'ebony', 'jet', 'coal', 'onyx', 'obsidian'],
+        'white': ['white', 'ivory', 'cream', 'pearl', 'snow', 'milk', 'vanilla', 'alabaster']
+    };
+    
+    const keywords = colorKeywords[baseColor.toLowerCase()] || [baseColor.toLowerCase()];
+    
+    // Filter colors that contain any of the keywords
+    filteredColorData = currentColorData.filter(color => {
+        const colorName = color.name.toLowerCase();
+        return keywords.some(keyword => colorName.includes(keyword));
+    });
 
     document.getElementById('main-container').innerHTML = '';  // Clear previous colors
-    displayColors(shades);  // Display the shades of the selected color
+    currentIndex = INITIAL_LOAD_COUNT;
+    displayColors(filteredColorData.slice(0, INITIAL_LOAD_COUNT));
+}
+
+// Function to reset to current filter view
+function resetToCurrentFilter() {
+    isFiltering = false;
+    currentIndex = INITIAL_LOAD_COUNT;
+    displayColors(currentColorData.slice(0, INITIAL_LOAD_COUNT));
+    
+    // Clear search bar
+    document.getElementById('search-bar').value = '';
 }
 
 // Hex to RGB conversion utility
@@ -95,16 +170,23 @@ function displayColors(colors, append = false) {
         paletteContainer.appendChild(entryDiv);
     });
 }
-
 // Function to search colors by name or hex
 function searchColors() {
     const query = document.getElementById('search-bar').value.toLowerCase();
-    const filteredColors = colorData.filter(color =>
-        color.name.toLowerCase().includes(query) || color.hex.toLowerCase().includes(query)
-    );
-    currentIndex = filteredColors.length;
-    document.getElementById('main-container').innerHTML = '';
-    displayColors(filteredColors);
+    
+    if (query) {
+        isFiltering = true;
+        filteredColorData = currentColorData.filter(color => 
+            color.name.toLowerCase().includes(query) || color.hex.toLowerCase().includes(query)
+        );
+    } else {
+        isFiltering = false;
+        filteredColorData = [];
+    }
+    
+    currentIndex = INITIAL_LOAD_COUNT;
+    const dataToDisplay = isFiltering ? filteredColorData : currentColorData;
+    displayColors(dataToDisplay.slice(0, INITIAL_LOAD_COUNT));
 }
 
 // Fisher-Yates Shuffle Algorithm to randomize the colors array
@@ -117,7 +199,10 @@ function shuffleArray(array) {
 }
 
 function loadMoreColors() {
-    const nextColors = colorData.slice(currentIndex, currentIndex + INITIAL_LOAD_COUNT);
+    const dataToLoad = isFiltering ? filteredColorData : currentColorData;
+    if (currentIndex >= dataToLoad.length) return; // No more colors to load
+    
+    const nextColors = dataToLoad.slice(currentIndex, currentIndex + INITIAL_LOAD_COUNT);
     displayColors(nextColors, true);
     currentIndex += INITIAL_LOAD_COUNT;
 }

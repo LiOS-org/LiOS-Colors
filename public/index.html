@@ -13,7 +13,7 @@
       <script>
       window.addEventListener('load', function () {
         const preloader = document.querySelector('.bouncing-loader');
-        const navbar = document.querySelector('.navigation_container_bottom');
+        const navbar = document.querySelector('.pebble_navigation_container_bottom');
         
         // Step 1: Fade out the preloader
         preloader.style.opacity = 0;
@@ -34,19 +34,42 @@
 </head>
 <body>
     <div>
-        <div id="rainbow-picker">
-            <div class="rainbow-swatch" style="background-color: red;" onclick="showShades('red')"></div>
-            <div class="rainbow-swatch" style="background-color: orange;" onclick="showShades('orange')"></div>
-            <div class="rainbow-swatch" style="background-color: yellow;" onclick="showShades('yellow')"></div>
-            <div class="rainbow-swatch" style="background-color: green;" onclick="showShades('green')"></div>
-            <div class="rainbow-swatch" style="background-color: blue;" onclick="showShades('blue')"></div>
-            <div class="rainbow-swatch" style="background-color: indigo;" onclick="showShades('indigo')"></div>
-            <div class="rainbow-swatch" style="background-color: violet;" onclick="showShades('violet')"></div>
+        <!-- Filter Controls -->
+        <div id="filter-controls" class="frosted_background frosted_texture">
+            <div class="filter_container">
+              <button id="filter-all" class="filter-btn active" onclick="setFilter('all')">All Colors</button>
+              <button id="filter-best" class="filter-btn" onclick="setFilter('best')">Best Of</button>
+              <button id="filter-short" class="filter-btn" onclick="setFilter('short')">Short Names</button>
+            </div>
+            <div class="color-row">
+                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #ff0000, #cc0000);" onclick="showShades('red')" title="Red shades"></div>
+                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #ff8c00, #ff6500);" onclick="showShades('orange')" title="Orange shades"></div>
+                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #ffd700, #ffb300);" onclick="showShades('yellow')" title="Yellow shades"></div>
+                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #32cd32, #228b22);" onclick="showShades('green')" title="Green shades"></div>
+                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #1e90ff, #0066cc);" onclick="showShades('blue')" title="Blue shades"></div>
+                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #4b0082, #301934);" onclick="showShades('indigo')" title="Indigo shades"></div>
+                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #8a2be2, #6a1b9a);" onclick="showShades('violet')" title="Violet shades"></div>
+                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #9932cc, #663399);" onclick="showShades('purple')" title="Purple shades"></div>
+                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #ff69b4, #e6399b);" onclick="showShades('pink')" title="Pink shades"></div>
+                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #8b4513, #654321);" onclick="showShades('brown')" title="Brown shades"></div>
+                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #808080, #555555);" onclick="showShades('gray')" title="Gray shades"></div>
+                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #000000, #333333);" onclick="showShades('black')" title="Black shades"></div>
+                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #ffffff, #f0f0f0); border: 2px solid #ddd;" onclick="showShades('white')" title="White shades"></div>
+                <button class="reset-btn frosted_background frosted_texture" onclick="resetToCurrentFilter()" title="Reset to current filter view">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
+                        <path d="M21 3v5h-5"/>
+                        <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/>
+                        <path d="M3 21v-5h5"/>
+                    </svg>
+                    Reset
+                </button>
+            </div>
         </div>
         </div>
-        <input type="text" id="search-bar" placeholder="Search colors..." onkeyup="searchColors()"></div>
+        </div>
        <!-- For SEO -->
-      <div id="description" class="for_seo frosted_background frosted_texture mouse_cursor_gradient_tracking">
+      <div id="description" class="for_seo frosted_background frosted_texture">
         <h1>LiOS Colors</h1>
         <p>
             LiOS Colors is a browsable library of beautiful colors, whose main aim is to provide translucent colors for UI design. 
@@ -62,65 +85,13 @@
               <div></div>
               <div></div>
             </div>
-            <div class="navigation_container_bottom Frosted_Background frosted_texture  mouse_cursor_gradient_tracking">
+            <div class="pebble_navigation_container_bottom">
               <!-- Home -->
-                <a href="" class="navigation_buttons"><svg class="navigation_icon" alt="Home"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
-                    <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                  </svg>
-                  <div class="navigation_icon_name">Home</div>
-                </a>
-              <!-- Best Of -->
-                <a href="best-of/" class="navigation_buttons"><svg class="navigation_icon" alt="Best Of"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
-                  <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
-                  <path d="M4 22h16" />
-                  <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
-                  <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
-                  <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
-                </svg><div class="navigation_icon_name">Best Of</div></a>
-              <!-- short -->
-              <a href="short/" class="navigation_buttons"><svg class="navigation_icon" alt="short"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M3 6h18" />
-                <path d="M7 12h10" />
-                <path d="M10 18h4" />
-              </svg>
-              <div class="navigation_icon_name">Short names</div>
-              </a>
+               <a href="/" class="pebble frosted_background frosted_texture"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a>
+               <!-- Search -->
+                <input class="pebble frosted_background frosted_texture" type="text" id="search-bar" placeholder="Search colors..." onkeyup="searchColors()"></input>
               <!-- About -->
-               <a href="#About" class="navigation_buttons"><svg class="navigation_icon"  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="10" />  <path d="M12 16v-4" />  <path d="M12 8h.01" /></svg>
-                  <div class="navigation_icon_name">About</div>
-               </a>
+               <a href="#About" class="pebble frosted_background frosted_texture"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></a>
             </div>
             <!-- Windows Start here -->
             <div id="About" class="frosted_background frosted_texture  window">
@@ -133,7 +104,7 @@
                   <p>LiOS Colors is a browsable library of beautiful colors, whose main aim is to provide translucent colors for UI design. LiOS-Colors is a part of the <a href="https://github.com/LiOS-org">LiOS-Org</a> and a fork of <a href="https://github.com/meodai/color-names">meodai/color-names</a>.</p>
                   <h3>General Information</h3>
                     <div class="window_box_container">
-                      <a href="https://github.com/LiOS-org/LiOS-Colors/releases/tag/1.2.0" class="window_box"><div class="left"><b>Version</b></div><div class="right">1.2.0</div></a>
+                      <a href="https://github.com/LiOS-org/LiOS-Colors/releases/tag/1.3.0" class="window_box"><div class="left"><b>Version</b></div><div class="right">1.3.0</div></a>
                       <div class="window_box"><div class="left"><b>Version name</b></div><div class="right">Rainbow Shades</div></div>
                       <div class="window_box"><div class="left"><b>Channel</b></div><div class="right">Stable</div></div>
                       <div class="window_box"><div class="left"><b>LiOS-Open Version</b></div><div class="right">Unreleased, rolling</div></div>

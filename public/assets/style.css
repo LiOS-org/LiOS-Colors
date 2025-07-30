@@ -70,42 +70,67 @@ button.copy-btn:hover{
     color: var(--white);
     transition: all 0.3s ease-in-out;
 }
-#search-bar{
-    display: block;
-    background: var(--Frosted_Background);
-    padding: auto;
-    font-size: 26px;
-    margin-bottom: 20px;
-    outline: none;
-    border: none;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    border-radius: 5px;
-}
-#search-bar:focus{
-    outline: none;
-}
 #main-container{
     margin-left: 3%;
 }
 #rainbow-picker {
     display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    align-items: center; /* Center rows horizontally */
     justify-content: center;
     margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 15px; /* Rounded corners for the container */
+}
+
+.color-row,.filter_container {
+    display: flex; /* Arrange swatches in a row */
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 10px; /* Space between rows */
+    flex-wrap: wrap;
 }
 
 .rainbow-swatch {
-    width: 40px;
-    height: 40px;
+    width: 38px; /* Slightly smaller */
+    height: 38px;
     cursor: pointer;
-    margin: 0 5px;
+    margin: 0 6px; /* A bit more space */
     border-radius: 50%;
-    border: 2px solid #ccc;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Softer border */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Add a subtle shadow */
 }
 
 .rainbow-swatch:hover {
-    border-color: #000;
+    border-color: #fff;
+    transform: scale(1.1); /* Grow on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow */
+}
+
+.reset-btn {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background: var(--frosted_secondary);
+    color: var(--white);
+    margin-left: 15px;
+    opacity: 0.9;
+}
+
+.reset-btn:hover {
+    background: var(--frosted_primary);
+    transform: translateY(-2px);
+    opacity: 1;
+}
+
+.reset-btn svg {
+    margin-right: 6px;
 }
 /* For SEO */
 .for_seo{
@@ -120,4 +145,40 @@ button.copy-btn:hover{
     margin-left: 10%;
     margin-right: 10%;
 }
+/* Filter Controls */
+#filter-controls {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 100vh;
+    gap: 10px;
+    background: var(--frosted_white);
+    flex-direction: column;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background: var(--Frosted_Background);
+    color: var(--white);
+    opacity: 0.7;
+}
+
+.filter-btn:hover {
+    background: var(--frosted_primary);
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: var(--frosted_primary);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
 /* Scrollbar */
