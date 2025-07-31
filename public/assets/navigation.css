@@ -1,8 +1,8 @@
 /* Header embedded navigation */
 .header_embedded_navigation {
   flex-direction: column;
-  width: 90%;
-  margin-left: 5%;
+  width: 95%;
+  margin-left: 2.5%;
   margin-right: auto;
   background: var(--frosted_white);
   z-index: 10;
@@ -17,20 +17,20 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .filter_container{
   margin: 10px 10px;
   border-radius: 150px;
-  justify-content: center;
-  align-items: center;
   padding: 10px;
   background: var(--frosted_white);
 }
 .title_container{
   display: flex;
   text-align: center;
+  width: auto;
   font-size: 32px;
-  margin-left: 10px;
+  margin-left: 40px;
 }
 .title_container::before{
   content: "";
@@ -43,7 +43,7 @@
 }
 100%{
   content: "LiOS:Colors";
-  color: var(--secondary);
+  color: var(--white);
 }
 }
 /* Pebble Navigation */
@@ -66,7 +66,7 @@ button{
     text-align: center;
     font-size: 18px;
     border-radius: 100vh;
-    background: var(--frosted_secondary);
+    background: var(--frosted_white);
     height: 50px;
     width: 50px;
     transition: all 0.5s;
