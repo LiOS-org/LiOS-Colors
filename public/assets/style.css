@@ -10,6 +10,9 @@
     50% { background-position: 100% 100%; }
     100% { background-position: 0% 0%; }
 }
+#main-container{
+    margin-top: 5%;
+}
 #main-container .frosted_background{
     display: inline-block;
     height: 400px;
@@ -61,9 +64,10 @@ button.copy-btn{
     outline: none;
     background: var(--Frosted_Background);
     border: none;
-    border-radius: 5vh;
+    border-radius: 100vh;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    text-align: center;
 }
 button.copy-btn:hover{
     background: var(--frosted_primary);
@@ -83,11 +87,10 @@ button.copy-btn:hover{
     border-radius: 15px; /* Rounded corners for the container */
 }
 
-.color-row,.filter_container {
+.color-row{
     display: flex; /* Arrange swatches in a row */
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 10px; /* Space between rows */
     flex-wrap: wrap;
 }
 
@@ -99,7 +102,6 @@ button.copy-btn:hover{
     border-radius: 50%;
     border: 2px solid rgba(255, 255, 255, 0.5); /* Softer border */
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Add a subtle shadow */
 }
 
 .rainbow-swatch:hover {
@@ -107,72 +109,23 @@ button.copy-btn:hover{
     transform: scale(1.1); /* Grow on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow */
 }
-
-.reset-btn {
-    display: flex;
-    align-items: center;
-    padding: 8px 15px;
-    font-size: 15px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    background: var(--frosted_secondary);
-    color: var(--white);
-    margin-left: 15px;
-    opacity: 0.9;
-}
-
-.reset-btn:hover {
-    background: var(--frosted_primary);
-    transform: translateY(-2px);
-    opacity: 1;
-}
-
-.reset-btn svg {
-    margin-right: 6px;
-}
-/* For SEO */
-.for_seo{
-    border-radius: 100vw;
-    background: var(--Frosted_Background);
-    text-align: center;
-    color: var(--white);
-    display: block;
-}
-.for_seo p{
-    max-width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-}
 /* Filter Controls */
-#filter-controls {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-    padding: 15px;
-    border-radius: 100vh;
-    gap: 10px;
-    background: var(--frosted_white);
-    flex-direction: column;
-}
 
 .filter-btn {
-    padding: 10px 20px;
+    padding: 5px 5px;
     font-size: 16px;
     border: none;
-    border-radius: 25px;
+    border-radius: 100vh;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    background: var(--Frosted_Background);
-    color: var(--white);
+    background: var(--frosted_white);
+    color: var(--secondary);
     opacity: 0.7;
 }
 
 .filter-btn:hover {
     background: var(--frosted_primary);
     opacity: 1;
-    transform: translateY(-2px);
 }
 
 .filter-btn.active {
@@ -180,5 +133,29 @@ button.copy-btn:hover{
     opacity: 1;
     transform: scale(1.05);
 }
+.hero_pallete{
+    display: none; /* Hide the original hero palette */
+    height: 400px;
+    width: 325px;
+    margin: 5px;
+    border-radius: 2%;
+    background: var(--Frosted_Background);
+    border-radius: 2%;
+    z-index: 0;
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+    color: var(--white);
+    transform: translateY(-3%);
+}
+.hero_pallete:hover{
+    transition: all 0.3s ease-in-out;
+}
 
-/* Scrollbar */
+/* Show hero palette when it's inside main-container */
+#main-container .hero_pallete {
+    display: inline-block;
+}
+
+.hero_pallete h1{
+    text-align: center;
+}

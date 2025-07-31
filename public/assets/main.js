@@ -7,6 +7,7 @@ let currentColorData = [];
 let filteredColorData = []; // Store current filtered results
 let currentFilter = 'all';
 let isFiltering = false; // Track if we're in a filtered state
+let heroDisplayed = false; // Track if hero palette has been displayed
 
 // Fetch all three datasets
 Promise.all([
@@ -31,6 +32,7 @@ Promise.all([
 function setFilter(filterType) {
     isFiltering = false;
     currentFilter = filterType;
+    heroDisplayed = false; // Reset hero display flag
     
     // Update button states
     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
@@ -57,6 +59,7 @@ function setFilter(filterType) {
 // Function to show shades of the selected color
 function showShades(baseColor) {
     isFiltering = true;
+    heroDisplayed = false; // Reset hero display flag
     // More accurate color filtering
     const colorKeywords = {
         'red': ['red', 'crimson', 'scarlet', 'cherry', 'rose', 'ruby', 'burgundy', 'maroon', 'coral', 'salmon', 'pink'],
@@ -90,6 +93,7 @@ function showShades(baseColor) {
 // Function to reset to current filter view
 function resetToCurrentFilter() {
     isFiltering = false;
+    heroDisplayed = false; // Reset hero display flag
     currentIndex = INITIAL_LOAD_COUNT;
     displayColors(currentColorData.slice(0, INITIAL_LOAD_COUNT));
     
@@ -113,7 +117,20 @@ function hexToRGB(hex) {
 // Function to display colors (used both to show all colors by default and filtered results)
 function displayColors(colors, append = false) {
     const paletteContainer = document.getElementById('main-container');
-    if (!append) paletteContainer.innerHTML = '';  // Clear only if not appending
+    if (!append) {
+        paletteContainer.innerHTML = '';  // Clear only if not appending
+        
+        // Move hero_palette into main-container as first item if not already there
+        if (!heroDisplayed) {
+            const heroElement = document.querySelector('.hero_pallete');
+            if (heroElement) {
+                // Clone the hero element to avoid moving it from its original position
+                const heroClone = heroElement.cloneNode(true);
+                paletteContainer.appendChild(heroClone);
+                heroDisplayed = true;
+            }
+        }
+    }
 
     colors.forEach(color => {
         const entryDiv = document.createElement('div');

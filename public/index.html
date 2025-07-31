@@ -33,49 +33,46 @@
       </script>
 </head>
 <body>
+  <header class="header_embedded_navigation">
+    <div class="container frosted_background frosted_texture">
+      <div class="title_container"><!--Filled with ::before and ::after in navigation.css--></div>
+      <!-- Filter Controls -->
+      <div class="filter_container frosted_background">
+              <button id="filter-all" class="filter-btn active frosted_texture" onclick="setFilter('all')">All Colors</button>
+              <button id="filter-best" class="filter-btn frosted_texture" onclick="setFilter('best')">Best Of</button>
+              <button id="filter-short" class="filter-btn frosted_texture" onclick="setFilter('short')">Short Names</button>
+      </div>
+    </div>
+  </header>
     <div>
-        <!-- Filter Controls -->
-        <div id="filter-controls" class="frosted_background frosted_texture">
-            <div class="filter_container">
-              <button id="filter-all" class="filter-btn active" onclick="setFilter('all')">All Colors</button>
-              <button id="filter-best" class="filter-btn" onclick="setFilter('best')">Best Of</button>
-              <button id="filter-short" class="filter-btn" onclick="setFilter('short')">Short Names</button>
-            </div>
-            <div class="color-row">
-                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #ff0000, #cc0000);" onclick="showShades('red')" title="Red shades"></div>
-                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #ff8c00, #ff6500);" onclick="showShades('orange')" title="Orange shades"></div>
-                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #ffd700, #ffb300);" onclick="showShades('yellow')" title="Yellow shades"></div>
-                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #32cd32, #228b22);" onclick="showShades('green')" title="Green shades"></div>
-                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #1e90ff, #0066cc);" onclick="showShades('blue')" title="Blue shades"></div>
-                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #4b0082, #301934);" onclick="showShades('indigo')" title="Indigo shades"></div>
-                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #8a2be2, #6a1b9a);" onclick="showShades('violet')" title="Violet shades"></div>
-                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #9932cc, #663399);" onclick="showShades('purple')" title="Purple shades"></div>
-                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #ff69b4, #e6399b);" onclick="showShades('pink')" title="Pink shades"></div>
-                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #8b4513, #654321);" onclick="showShades('brown')" title="Brown shades"></div>
-                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #808080, #555555);" onclick="showShades('gray')" title="Gray shades"></div>
-                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #000000, #333333);" onclick="showShades('black')" title="Black shades"></div>
-                <div class="rainbow-swatch" style="background: linear-gradient(135deg, #ffffff, #f0f0f0); border: 2px solid #ddd;" onclick="showShades('white')" title="White shades"></div>
-                <button class="reset-btn frosted_background frosted_texture" onclick="resetToCurrentFilter()" title="Reset to current filter view">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
-                        <path d="M21 3v5h-5"/>
-                        <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/>
-                        <path d="M3 21v-5h5"/>
-                    </svg>
-                    Reset
-                </button>
-            </div>
-        </div>
         </div>
         </div>
        <!-- For SEO -->
       <div id="description" class="for_seo frosted_background frosted_texture">
+      </div>
+      <div class="hero_pallete frosted_texture frosted_background">
         <h1>LiOS Colors</h1>
         <p>
             LiOS Colors is a browsable library of beautiful colors, whose main aim is to provide translucent colors for UI design. 
             LiOS-Colors is a part of the <a rel="noopener" href="https://github.com/LiOS-org" target="_blank">LiOS-Org</a> and a fork of 
             <a rel="noopener" href="https://github.com/meodai/color-names" target="_blank">meodai/color-names</a>.
         </p>
+        <hr>
+        <div class="color-row">
+        <div class="rainbow-swatch" style="background: linear-gradient(135deg, #ff0000, #cc0000);" onclick="showShades('red')" title="Red shades"></div>
+        <div class="rainbow-swatch" style="background: linear-gradient(135deg, #ff8c00, #ff6500);" onclick="showShades('orange')" title="Orange shades"></div>
+        <div class="rainbow-swatch" style="background: linear-gradient(135deg, #ffd700, #ffb300);" onclick="showShades('yellow')" title="Yellow shades"></div>
+        <div class="rainbow-swatch" style="background: linear-gradient(135deg, #32cd32, #228b22);" onclick="showShades('green')" title="Green shades"></div>
+        <div class="rainbow-swatch" style="background: linear-gradient(135deg, #1e90ff, #0066cc);" onclick="showShades('blue')" title="Blue shades"></div>
+        <div class="rainbow-swatch" style="background: linear-gradient(135deg, #4b0082, #301934);" onclick="showShades('indigo')" title="Indigo shades"></div>
+        <div class="rainbow-swatch" style="background: linear-gradient(135deg, #8a2be2, #6a1b9a);" onclick="showShades('violet')" title="Violet shades"></div>
+        <div class="rainbow-swatch" style="background: linear-gradient(135deg, #9932cc, #663399);" onclick="showShades('purple')" title="Purple shades"></div>
+        <div class="rainbow-swatch" style="background: linear-gradient(135deg, #ff69b4, #e6399b);" onclick="showShades('pink')" title="Pink shades"></div>
+        <div class="rainbow-swatch" style="background: linear-gradient(135deg, #8b4513, #654321);" onclick="showShades('brown')" title="Brown shades"></div>
+        <div class="rainbow-swatch" style="background: linear-gradient(135deg, #808080, #555555);" onclick="showShades('gray')" title="Gray shades"></div>
+        <div class="rainbow-swatch" style="background: linear-gradient(135deg, #000000, #333333);" onclick="showShades('black')" title="Black shades"></div>
+        <div class="rainbow-swatch" style="background: linear-gradient(135deg, #ffffff, #f0f0f0); border: 2px solid #ddd;" onclick="showShades('white')" title="White shades"></div>
+      </div>
       </div>
       <div id="main-container"></div>
       <div id="scroll-anchor"></div>
@@ -92,6 +89,8 @@
                 <input class="pebble frosted_background frosted_texture" type="text" id="search-bar" placeholder="Search colors..." onkeyup="searchColors()"></input>
               <!-- About -->
                <a href="#About" class="pebble frosted_background frosted_texture"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></a>
+              <!-- Reset -->
+              <button class="pebble frosted_background frosted_texture" onclick="resetToCurrentFilter()" title="Reset to current filter view"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-cw-icon lucide-refresh-cw"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></button>
             </div>
             <!-- Windows Start here -->
             <div id="About" class="frosted_background frosted_texture  window">
