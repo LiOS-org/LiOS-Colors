@@ -229,5 +229,23 @@ function setupInfiniteScroll() {
         if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
             loadMoreColors();
         }
+        
+        // Show/hide back to top button based on scroll position
+        const backToTopBtn = document.getElementById('back-to-top');
+        if (window.scrollY > 300) {
+            backToTopBtn.style.opacity = '1';
+            backToTopBtn.style.pointerEvents = 'auto';
+        } else {
+            backToTopBtn.style.opacity = '0.5';
+            backToTopBtn.style.pointerEvents = 'none';
+        }
+    });
+}
+
+// Function to scroll to top smoothly
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
     });
 }

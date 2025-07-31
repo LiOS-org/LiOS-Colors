@@ -53,10 +53,11 @@
     bottom:5%;
     margin-left: 50%;
     margin-right: auto;
-    max-width: 500px;
+    max-width: 600px;
     transform: translateX(-50%);
     width: 95%;
     justify-content: space-between;
+    gap: 8px;
 }
 button{
     all: unset; 
@@ -96,4 +97,14 @@ button{
 }
 #search-bar:focus{
     outline: none;
+}
+/* Back to top button styling */
+#back-to-top {
+    opacity: 0.5;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+#back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
 }
