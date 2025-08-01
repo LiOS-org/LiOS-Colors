@@ -5,6 +5,7 @@
     --quaternary:#91eae4;
     --white:#eeded8;
     --black:#25212a;
+    --red:#b40441;
     /* Frosted colors */
     --Frosted_Background:var(--e4eeeb);
     --frosted_white:var(--eeded8);
@@ -15,4 +16,6 @@
     /* Scrollbar */
     --scrollbar_thumb:var(--e4eeeb);
     --scrollbar_thumb_hover:var(--frosted_primary);
+    /* LiOS Windows */
+    --lios-window-border-color: var(--secondary);
 }
