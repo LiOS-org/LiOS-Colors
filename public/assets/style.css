@@ -148,7 +148,9 @@ button.copy-btn:hover{
     transform: translateY(-3%);
 }
 .hero_pallete:hover{
-    transition: all 0.3s ease-in-out;
+    scale: 1!important;
+    background: var(--Frosted_Background)!important;
+    color: var(--white)!important;
 }
 
 /* Show hero palette when it's inside main-container */
