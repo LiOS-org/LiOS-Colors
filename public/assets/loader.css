@@ -1,5 +1,6 @@
 .bouncing-loader{
     z-index: 10;
+    background: var(--frosted_white);
 }
 .bouncing-loader > div{
     background: var(--secondary);

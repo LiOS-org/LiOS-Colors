@@ -1,5 +1,4 @@
 :root{
-    --lios-button-group-background:var(--frosted_white);
     --lios-button-background: var(--frosted_white);
     --lios-button-on-hover-background:var(--primary);
 }
