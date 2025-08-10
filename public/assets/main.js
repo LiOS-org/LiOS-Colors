@@ -1,4 +1,4 @@
-const INITIAL_LOAD_COUNT = 20;
+const INITIAL_LOAD_COUNT = 20; // User preference: 20 items per page for large database size
 let currentIndex = 0;
 let allColorData = [];
 let bestOfColorData = [];
@@ -134,22 +134,20 @@ function displayColors(colors, append = false) {
 
     colors.forEach(color => {
         const entryDiv = document.createElement('div');
-        entryDiv.className = 'frosted_texture frosted_background';
+        entryDiv.className = 'frosted_texture frosted_background palette-container';
 
         const colorDiv = document.createElement('div');
-        colorDiv.className = `color-item ${color.name}`;
+        colorDiv.className = `color-palette color-item ${color.name.replace(/\s+/g, '-').toLowerCase()}`;
         colorDiv.style.background = color.hex;
-        colorDiv.id = "color-pallete";
 
         const infoDiv = document.createElement('div');
-        infoDiv.id = 'info';
+        infoDiv.className = 'color-info';
         const nameDiv = document.createElement('div');
-        nameDiv.id = 'name';
+        nameDiv.className = 'color-name';
         nameDiv.textContent = color.name;
 
         const hexDiv = document.createElement('div');
-        hexDiv.id = 'hex';
-        hexDiv.className = 'copyable';
+        hexDiv.className = 'color-hex copyable';
         hexDiv.textContent = color.hex;
 
         const hexCopyBtn = document.createElement('button');
@@ -163,17 +161,16 @@ function displayColors(colors, append = false) {
 
         const rgb = hexToRGB(color.hex);
         const rgbDiv = document.createElement('div');
-        rgbDiv.id = 'rgb';
-        rgbDiv.className = 'copyable';
+        rgbDiv.className = 'color-rgb copyable';
         rgbDiv.textContent = rgb;
 
         const rgbCopyBtn = document.createElement('button');
-        rgbCopyBtn.textContent = 'Copy RGB';
+        rgbCopyBtn.innerHTML = '<span>Copy RGB</span>';
         rgbCopyBtn.className = 'lios-button frosted_background';
         rgbCopyBtn.onclick = () => {
             navigator.clipboard.writeText(rgb);
-            rgbCopyBtn.textContent = 'Copied!';
-            setTimeout(() => rgbCopyBtn.textContent = 'Copy RGB', 1000);
+            rgbCopyBtn.innerHTML = '<span>Copied!</span>';
+            setTimeout(() => rgbCopyBtn.innerHTML = '<span>Copy RGB</span>', 1000);
         };
 
         infoDiv.appendChild(nameDiv);

@@ -6,7 +6,7 @@
     background: var(--red);
 }
 .lios-window-titlebar{
-    transform: translateY(-2px);
+    overflow: hidden;
 }
 .lios-window-card{
     background: var(--frosted_white);
