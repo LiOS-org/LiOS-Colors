@@ -153,12 +153,12 @@ function displayColors(colors, append = false) {
         hexDiv.textContent = color.hex;
 
         const hexCopyBtn = document.createElement('button');
-        hexCopyBtn.textContent = 'Copy Hex';
-        hexCopyBtn.className = 'copy-btn frosted_background frosted_texture';
+        hexCopyBtn.innerHTML = '<span>Copy Hex</span>';
+        hexCopyBtn.className = 'lios-button frosted_background';
         hexCopyBtn.onclick = () => {
             navigator.clipboard.writeText(color.hex);
-            hexCopyBtn.textContent = 'Copied!';
-            setTimeout(() => hexCopyBtn.textContent = 'Copy Hex', 1000);
+            hexCopyBtn.innerHTML = '<span>Copied!</span>';
+            setTimeout(() => hexCopyBtn.innerHTML = '<span>Copy Hex</span>', 1000);
         };
 
         const rgb = hexToRGB(color.hex);
@@ -169,7 +169,7 @@ function displayColors(colors, append = false) {
 
         const rgbCopyBtn = document.createElement('button');
         rgbCopyBtn.textContent = 'Copy RGB';
-        rgbCopyBtn.className = 'copy-btn frosted_background frosted_texture';
+        rgbCopyBtn.className = 'lios-button frosted_background';
         rgbCopyBtn.onclick = () => {
             navigator.clipboard.writeText(rgb);
             rgbCopyBtn.textContent = 'Copied!';

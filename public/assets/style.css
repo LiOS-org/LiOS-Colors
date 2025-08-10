@@ -53,7 +53,7 @@
     font-size: 20px;
     text-align: center;
 }
-button.copy-btn{
+button.lios-button{
     display: block;
     max-width: 90%;
     max-height: fit-content;
@@ -68,11 +68,10 @@ button.copy-btn{
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     text-align: center;
+    color: var(--black);
 }
-button.copy-btn:hover{
-    background: var(--frosted_primary);
-    color: var(--white);
-    transition: all 0.3s ease-in-out;
+button.lios-button:hover{
+    color: var(--black);
 }
 #main-container{
     margin-left: 3%;
@@ -110,28 +109,8 @@ button.copy-btn:hover{
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow */
 }
 /* Filter Controls */
-
-.filter-btn {
-    padding: 5px 5px;
-    font-size: 16px;
-    border: none;
-    border-radius: 100vh;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    background: var(--frosted_white);
-    color: var(--black);
-    opacity: 0.7;
-}
-
-.filter-btn:hover {
-    background: var(--frosted_primary);
-    opacity: 1;
-}
-
 .filter-btn.active {
     background: var(--frosted_primary);
-    opacity: 1;
-    transform: scale(1.05);
 }
 .hero_pallete{
     display: none; /* Hide the original hero palette */
