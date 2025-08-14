@@ -1,21 +1,21 @@
-:root{
-    --primary:#ff91d4;
-    --secondary:#8c52ff;
-    --tertiary:#86a8e7;
-    --quaternary:#91eae4;
-    --white:#eeded8;
-    --black:#25212a;
-    --red:#b40441;
-    /* Frosted colors */
-    --Frosted_Background:var(--e4eeeb);
-    --frosted_white:var(--eeded8);
-    --frosted_primary:var(--cc338b);
-    --frosted_secondary:var(--8c52ff);
-    --frosted_tertiary:var(--86a8e7);
-    --frosted_quaternary:var(--91eae4);
-    /* Scrollbar */
-    --scrollbar_thumb:var(--e4eeeb);
-    --scrollbar_thumb_hover:var(--frosted_primary);
-    /* LiOS Windows */
-    --lios-window-border-color: var(--secondary);
+:root {
+  --primary: #ff91d4;
+  --secondary: #8c52ff;
+  --tertiary: #86a8e7;
+  --quaternary: #91eae4;
+  --white: #eeded8;
+  --black: #25212a;
+  --red: #b40441;
+  /* Frosted colors */
+  --Frosted_Background: var(--eeded8);
+  --frosted_white: var(--eeded8);
+  --frosted_primary: var(--cc338b);
+  --frosted_secondary: var(--8c52ff);
+  --frosted_tertiary: var(--86a8e7);
+  --frosted_quaternary: var(--91eae4);
+  /* Scrollbar */
+  --scrollbar_thumb: var(--e4eeeb);
+  --scrollbar_thumb_hover: var(--frosted_primary);
+  /* LiOS Windows */
+  --lios-window-border-color: var(--secondary);
 }

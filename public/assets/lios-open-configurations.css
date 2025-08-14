@@ -1,7 +1,8 @@
-:root{
-    --lios-button-background: var(--frosted_white);
-    --lios-button-on-hover-background:var(--primary);
+:root {
+  --lios-button-background: var(--frosted_white);
+  --lios-button-on-hover-background: var(--primary);
+  --lios-frosted-texture-color: var(--frosted_black);
 }
-.color-info{
-    --lios-button-border-radius:100vh;
+.color-info {
+  --lios-button-border-radius: 100vh;
 }
