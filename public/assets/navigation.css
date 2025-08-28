@@ -108,3 +108,6 @@ button{
     opacity: 1;
     pointer-events: auto;
 }
+.pebble_navigation_container_bottom .pebble{
+  cursor: pointer;
+}
