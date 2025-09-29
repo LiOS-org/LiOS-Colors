@@ -1,20 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-import { parseCSVString, findDuplicates, objArrToString } from './lib.js';
+import { parseCSVString, objArrToString } from './lib.js';
 import { exec } from 'child_process';
-
-const args = process.argv;
-const isTestRun = !!args.find((arg) => arg === '--testOnly');
-
-// only hex colors with 6 values
-const hexColorValidation = /^#[0-9a-f]{6}$/;
-const errors = [];
-
-// spaces regex
-const spacesValidation = /^\s+|\s{2,}|\s$/;
-
-// quote regex
-const quoteValidation = /"|'|`/;
 
 // setting
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
@@ -28,7 +15,6 @@ const readmeFileName = 'README.md';
 const fileNameShortPostfix = '.short';
 const maxShortNameLength = 12;
 
-const sortBy = 'name';
 const csvKeys = ['name', 'hex'];
 const bestOfKey = 'good name';
 
@@ -38,61 +24,6 @@ const src = fs
   .toString();
 
 const colorsSrc = parseCSVString(src);
-
-// sort by sorting criteria
-colorsSrc.entries.sort((a, b) => {
-  return a[sortBy].localeCompare(b[sortBy]);
-});
-
-csvKeys.forEach((key) => {
-  // find duplicates
-  const dupes = findDuplicates(colorsSrc.values[key]);
-  dupes.forEach((dupe) => {
-    log(key, dupe, `found a double ${key}`);
-  });
-});
-
-// loop hex values for validations
-colorsSrc.values['hex'].forEach((hex) => {
-  // validate HEX values
-  if (!hexColorValidation.test(hex)) {
-    log(
-      'hex',
-      hex,
-      `${hex} is not a valid hex value. (Or to short, we avoid using the hex shorthands, no capital letters)`
-    );
-  }
-});
-
-// loop names
-colorsSrc.values['name'].forEach((name) => {
-  // check for spaces
-  if (spacesValidation.test(name)) {
-    log('name', name, `${name} found either a leading or trailing space (or both)`);
-  }
-  if (quoteValidation.test(name)) {
-    log('name', name, `${name} found a quote character, should be an apostrophe ’`);
-  }
-});
-
-// loop good name markers
-colorsSrc.values[bestOfKey].forEach((str) => {
-  // check for spaces
-  if (spacesValidation.test(str)) {
-    log(`"${bestOfKey}" marker'`, str, `${str} found either a leading or trailing space (or both)`);
-  }
-
-  if (!(str == 'x' || str == '')) {
-    log(`"${bestOfKey}" marker`, str, `${str} must be a lowercase "x" character or empty`);
-  }
-});
-
-showLog();
-
-if (isTestRun) {
-  console.log('⇪ See test results above ⇪');
-  process.exit();
-}
 
 // creates JS related files
 const JSONExportString = JSON.stringify(
@@ -358,7 +289,7 @@ fs.writeFileSync(
     )
     .replace(
       // update file size
-      /\d+(\.\d+)? MB\)__/g,
+      /\d+(\.\d+)? MB\)__/, // no global to only hit first occurrence
       `${(
         fs.statSync(path.normalize(`${baseFolder}${folderDist}${fileNameSrc}.json`)).size /
         1024 /
@@ -367,45 +298,6 @@ fs.writeFileSync(
     ),
   'utf8'
 );
-
-/**
- * outputs the collected logs
- */
-function showLog() {
-  let errorLevel = 0;
-  let totalErrors = 0;
-  errors.forEach((error, i) => {
-    totalErrors = i + 1;
-    errorLevel = error.errorLevel || errorLevel;
-    console.log(`${error.errorLevel ? '⛔' : '⚠'}  ${error.message}`);
-    console.log(JSON.stringify(error.entries));
-    console.log('*-------------------------*');
-  });
-  if (errorLevel) {
-    throw new Error(`⚠ failed because of the ${totalErrors} error${totalErrors > 1 ? 's' : ''} above ⚠`);
-  }
-  return totalErrors;
-}
-
-/**
- * logs errors and warning
- * @param   {string} key        key to look for in input
- * @param   {string} value      value to look for
- * @param   {string} message    error message
- * @param   {Number} errorLevel if any error is set to 1, the program will exit
- */
-function log(key, value, message, errorLevel = 1) {
-  const error = {};
-  // looks for the original item that caused the error
-  error.entries = colorsSrc.entries.filter((entry) => {
-    return entry[key] === value;
-  });
-
-  error.message = message;
-  error.errorLevel = errorLevel;
-
-  errors.push(error);
-}
 
 // gets SVG template
 const svgTpl = fs.readFileSync(path.normalize(__dirname + '/changes.svg.tpl'), 'utf8').toString();
