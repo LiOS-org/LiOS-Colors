@@ -1,17 +1,17 @@
 {
     "projectName" : "LiOS-Colors",
-    "projectVersion" : "2.1.0",
+    "projectVersion" : "2.2.0",
     "versionName" : "Glassline",
-    "channel" : "stable",
+    "channel" : "Stable",
     "github" : "https://github.com/LiOS-org/LiOS-Colors",
     "licenses" : [
         {
-            "for" : "source code",
+            "for" : "Source Code",
             "license" : "GPL-3.0",
             "copy" : "https://github.com/LiOS-org/LiOS-Colors?tab=GPL-3.0-1-ov-file"
         },
         {
-            "for" : "source code (upstream)",
+            "for" : "Source Code (upstream)",
             "license" : "MIT",
             "copy" : "https://github.com/LiOS-org/LiOS-Colors/blob/master/MIT%20LICENSE"
         },
