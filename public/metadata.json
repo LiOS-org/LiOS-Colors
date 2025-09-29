@@ -1,0 +1,24 @@
+{
+    "projectName" : "LiOS-Colors",
+    "projectVersion" : "2.1.0",
+    "versionName" : "Glassline",
+    "channel" : "stable",
+    "github" : "https://github.com/LiOS-org/LiOS-Colors",
+    "licenses" : [
+        {
+            "for" : "source code",
+            "license" : "GPL-3.0",
+            "copy" : "https://github.com/LiOS-org/LiOS-Colors?tab=GPL-3.0-1-ov-file"
+        },
+        {
+            "for" : "source code (upstream)",
+            "license" : "MIT",
+            "copy" : "https://github.com/LiOS-org/LiOS-Colors/blob/master/MIT%20LICENSE"
+        },
+        {
+            "for" : "Lucid Icons",
+            "license" : "ISC License",
+            "copy" : "https://github.com/lucide-icons/lucide?tab=License-1-ov-file"
+        }
+    ]
+}
