@@ -31,6 +31,7 @@
   width: auto;
   font-size: 32px;
   margin-left: 40px;
+  color: var(--secondary);
 }
 .title_container::before{
   content: "";
@@ -43,7 +44,7 @@
 }
 100%{
   content: "LiOS:Colors";
-  color: var(--white);
+  color: var(--secondary);
 }
 }
 /* Pebble Navigation */
@@ -63,7 +64,7 @@ button{
     all: unset; 
 }
 .pebble{
-    color: var(--white);
+    color: var(--secondary);
     text-align: center;
     font-size: 18px;
     border-radius: 100vh;
@@ -79,7 +80,7 @@ button{
 }
 #search-bar:hover::placeholder{
   background: var(--frosted_secondary);
-  color: var(--primary);
+  color: var(--secondary);
   transition: all 0.5s;
 }
 .pebble svg{
@@ -93,7 +94,7 @@ button{
     width: 60%;
 }
 #search-bar::placeholder{
-    color: var(--white);
+    color: var(--secondary);
 }
 #search-bar:focus{
     outline: none;

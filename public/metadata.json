@@ -1,7 +1,7 @@
 {
     "projectName" : "LiOS Colors",
     "projectDescription" : "It is a browsable library of beautiful colors, whose main aim is to provide translucent colors for UI design. LiOS-Colors is a part of the LiOS-Org and a fork of meodai/color-names.",
-    "projectVersion" : "2.3.0",
+    "projectVersion" : "2.3.1",
     "versionName" : "Glassline",
     "favicon" : "/assets/favicon.svg",
     "baseUrl": "https://colors.liosorg.com/",
