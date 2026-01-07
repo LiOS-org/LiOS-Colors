@@ -1,0 +1,29 @@
+.lios-window-container{
+    --background:var(--frosted-color-2);
+    background: var(--background);
+    border: 2px outset var(--background);
+    color: var(--color-3);
+}
+.lios-window-close{
+    background: var(--color-6);
+}
+.lios-window-card{
+    --background:var(--frosted-color-2);
+    background: var(--background);
+    border: 2px inset var(--background);
+}
+a.lios-window-value-row{
+    text-decoration: none;
+    color: inherit;
+}
+.lios-window-value-row{
+    --background:var(--frosted-color-5);
+    background: var(--background);
+    border: 2px outset var(--background);
+}
+.about-window-favicon{
+    size: 1/1;
+    width: 20vw;
+    display: flex;
+    justify-self: center;
+}

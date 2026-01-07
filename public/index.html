@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiOS Colors: Browse beautiful colors</title>
+    <link rel="shortcut icon" href="assets/favicon/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/lios-colors.css">
+    <link rel="stylesheet" href="assets/css/home/home.css">
+</head>
+<body>
+    <div class="hero-logo lios-frosted-glass">
+        <img src="assets/favicon/favicon.svg" alt="LiOS-Colors">
+    </div>
+    <div class="hero-desc lios-card lios-frosted-glass">
+        <h1>LiOS Colors</h1>
+        <p>LiOS-Colors is a browsable library of carefully curated colors, focused on translucent UI-friendly variants for modern interfaces.
+    </div>
+    <br>
+    <div class="lios-button-group hero-buttons">
+        <a href="/browse/" class="lios-action-button">Browse All Colors</a>
+    </div>
+    <div class="lios-card lios-frosted-glass home-usage-card">
+        <div class="lios-card-title">Installation</div>
+        <h3>Using @import method:</h3>
+        <div class="code-block">
+            <pre class="lios-frosted-glass copyable-code"><code>@import url("https://colors.liosorg.com/dist/translucent_colors.css");</code><div class="copy-button" aria-label="Copy to clipboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-icon lucide-clipboard"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg></div></pre>
+        </div>
+        <h3>Using git submodule add:</h3>
+        <div class="code-block">
+            <pre class="lios-frosted-glass copyable-code"><code>git submodule add https://github.com/LiOS-org/LiOS-Colors.git</code><div class="copy-button" aria-label="Copy to clipboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-icon lucide-clipboard"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg></div></pre>
+        </div>
+        <p>After submodule is added, import it to your main css file
+        <div class="code-block">
+            <pre class="lios-frosted-glass copyable-code"><code>@import url("${path-to-LiOS-Colors}/dist/translucent_colors.css");</code><div class="copy-button" aria-label="Copy to clipboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-icon lucide-clipboard"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg></div></pre>
+        </div>
+        </p>
+        <div class="lios-card-title">Usage</div>
+        <p>Translucent colors works by using CSS variables to define a set of translucent color values that can be applied to elements in your design.</p>
+        <p>To use these colors, you must have the color in <b>hex</b> format and the color should also exist in LiOS-Colors <b>database</b>(verify by searching the color in the browse section).</p>
+        <p>Once you have the color in hex format and it exists in the database, you can use it in your CSS using variable names.</p>
+        <p>You can get the variable name by replacing <b>#</b> of the hex code with <b>--</b>, for example: <b>#4b62d2</b> becomes <b>--4b62d2</b>.</p>
+    </div>
+    <div class="carousel">
+        <div class="home-color-showcase-1 lios-card-container"></div>
+    </div>
+    <br>
+    <div class="carousel">
+        <div class="home-color-showcase-2 lios-card-container"></div>
+    </div>
+    <script type="module" src="assets/js/home.js"></script>
+</body>
+<div class="lios-loader-3 hero-loader lios-frosted-glass">
+    <div></div>
+    <div></div>
+</div>
+</html>

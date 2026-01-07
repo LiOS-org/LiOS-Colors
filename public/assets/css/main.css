@@ -1,0 +1,72 @@
+:root{
+    background: radial-gradient(circle,var(--color-1),var(--color-5));
+}
+.hero-logo{
+    display: flex;
+    padding: 10px;
+    width: max-content;
+    height: max-content;
+    border-radius: 25px;
+    justify-self: center;
+    align-self: center;
+    --background:var(--frosted-color-2);
+    background: var(--background);
+    border: 2px outset var(--background);
+}
+.hero-logo img{
+    size: 1/1;
+    width: 25vw;
+}
+.hero-desc,.home-usage-card{
+    color: var(--color-4);
+    margin-top: 15px;
+    border-radius: 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    --background:var(--frosted-color-2);
+    background: var(--background);
+    border: 2px outset var(--background);
+    justify-self: center;
+}
+.hero-desc h1{
+    text-align: center;
+}
+.hero-loader{
+    z-index: 1000;
+    display: flex;
+    position: fixed;
+    justify-self: center;
+    align-self: center;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%, 50%);
+}
+.hero-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: row;
+}
+a.lios-action-button{
+    text-decoration: none;
+    color: unset;
+    
+}
+.copy-button{
+    cursor: pointer;
+}
+.copyable-code{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    justify-self: center;
+    padding: 4px;
+    align-items: center;
+    border-radius: 5px;
+    background: var(--frosted-color-1);
+    border: 2px inset var(--frosted-color-1);
+}
+.copyable-code code{
+    overflow-x: auto;
+    text-wrap: wrap;
+}

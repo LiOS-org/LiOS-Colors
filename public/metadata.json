@@ -1,0 +1,31 @@
+{
+    "projectName" : "LiOS Colors",
+    "projectDescription" : "LiOS-Colors is a browsable library of beautiful colors, it's main aim is to provide translucent colors for UI design. LiOS-Colors is a part of the LiOS-Org and is based on data from meodai/color-names.",
+    "projectVersion" : "3.0.0",
+    "versionName" : "Eastern Desert",
+    "favicon" : "/assets/favicon.svg",
+    "baseUrl": "https://colors.liosorg.com/",
+    "channel" : "Stable",
+    "github" : "https://github.com/LiOS-org/LiOS-Colors/blob/master/LICENSE",
+    "licenses" : [
+        {
+            "for" : "Source Code",
+            "license" : "GPL-3.0",
+            "copy" : "https://github.com/LiOS-org/LiOS-Colors?tab=GPL-3.0-1-ov-file"
+        },
+        {
+            "for" : "Source Code (upstream)",
+            "license" : "MIT",
+            "copy" : "https://github.com/LiOS-org/LiOS-Colors/blob/master/MIT%20LICENSE"
+        },
+        {
+            "for" : "Lucid Icons",
+            "license" : "ISC License",
+            "copy" : "https://github.com/lucide-icons/lucide?tab=License-1-ov-file"
+        }
+    ],
+    "cta" : {
+        "View Project" : "https://colors.liosorg.com/",
+        "View on Github" : "https://github.com/LiOS-org/LiOS-Colors "
+    }
+}

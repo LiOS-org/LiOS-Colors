@@ -1,0 +1,30 @@
+:root{
+    --lios-loader-3-container-color:var(--color-5);
+    --lios-loader-3-cube-color:var(--color-4);
+    --lios-loader-3-trail-color:var(--color-3);
+    --lios-loader-3-track-colorvar:(--frosted-color-2);
+    --lios-action-button-background:var(--color-5);
+    --lios-action-button-box-shadow:var(--color-4);
+    color: var(--color-4);
+}
+.lios-loader-3 div:last-child{
+    overflow: hidden;
+}
+.lios-loader-3 div:last-child::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;       
+    height: 100%;      
+    background-image: url(../favicon/favicon.svg);
+    background-size: cover;
+    background-position: center;
+    transform-origin: center;
+    transform: rotate(-45deg);
+}
+/* Browse */
+.browse-load-more-button{
+    --lios-action-button-background:var(--color-4);
+    --lios-action-button-box-shadow:var(--color-1);    
+}

@@ -1,0 +1,26 @@
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.home-color-showcase-1,.home-color-showcase-2 {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+    will-change: transform;
+}
+
+.home-color-showcase-1 .color-palette,.home-color-showcase-2 .color-palette {
+    flex: 0 0 auto;
+}
+.home-usage-card{
+    text-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    max-width: 95%;
+}
+.home-usage-card pre{
+    text-wrap: wrap;
+}

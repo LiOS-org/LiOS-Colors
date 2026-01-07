@@ -1,0 +1,25 @@
+.palettes-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.browse-header{
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+    margin: 15px;
+    --background:var(--frosted-color-2);
+    background: var(--background);
+    border: 2px outset var(--background);
+    border-radius: 15px;
+}
+.browse-header img{
+    size: 1/1;
+    width: 120px;
+}

@@ -1,0 +1,60 @@
+.pebble-navigation-container-bottom{
+    display: flex;
+    position: fixed;
+    bottom:5%;
+    margin-left: 50%;
+    margin-right: auto;
+    max-width: 600px;
+    transform: translateX(-50%);
+    width: 95%;
+    justify-content: space-between;
+    z-index: 5;
+}
+button{
+    all: unset; 
+}
+.pebble{
+    color: var(--color-3);
+    text-align: center;
+    font-size: 18px;
+    border-radius: 100vh;
+    --background: var(--frosted-color-2);
+    background: var(--background);
+    border: 2px outset var(--background);
+    height: 50px;
+    width: 50px;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+.reset-pebble{
+    display: none;
+}
+.pebble:hover{
+  --background:var(--frosted-color-1);
+  transition: all 0.5s ease-in-out;
+}
+.search-bar {
+    outline: none;
+    border: none;
+    min-width: 100px;
+    width: 60%;
+    --background: var(--frosted-color-2);
+    background: var(--background);
+    border: 2px outset var(--background);
+}
+.search-bar::placeholder{
+    color: var(--color-3);
+}
+.pebble svg{
+    height: 45px;
+    width: 45px;
+    padding: 2.5px;
+}
+.scroll-to-top-pebble{
+    display: none;
+}
