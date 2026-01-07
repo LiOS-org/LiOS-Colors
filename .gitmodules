@@ -1,0 +1,6 @@
+[submodule "public/LiOS-Open"]
+	path = public/LiOS-Open
+	url = https://github.com/LiOS-Org/LiOS-Open
+[submodule "public/LiOS-Web-Utils"]
+	path = public/LiOS-Web-Utils
+	url = https://github.com/LiOS-org/LiOS-Web-Utils.git
