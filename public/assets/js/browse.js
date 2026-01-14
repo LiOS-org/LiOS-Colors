@@ -1,11 +1,12 @@
 import { liosRandomizeArray } from "../../LiOS-Web-Utils/liosWebUtils.js";
 import { containerAddButtons, generatePalettes } from "./tools/generatePalettes.js";
 import { searchHandler } from "./tools/searchHandler.js";
+import { colorConvertor } from "./tools/colorConvertor.js";
 import { metadata, parseMetadata } from "./metadata.js";
 import { liosWindow } from "../../LiOS-Open/public/modules/JS/liosOpen.js";
 
 const main = async () => {
-    const colorsFile = await fetch("../data/colornames.json");
+    const colorsFile = await fetch("https://data.colors.liosorg.com/colornames.json");
     const colorsData = await colorsFile.json();
     const randomizedColorsData = liosRandomizeArray(colorsData);
     const scrollToTopPebble = document.querySelector(".scroll-to-top-pebble");

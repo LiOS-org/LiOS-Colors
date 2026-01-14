@@ -2,7 +2,7 @@ import { generatePalettes } from "./tools/generatePalettes.js"
 import { liosGetRandomItems } from "../../LiOS-Web-Utils/liosWebUtils.js";
 
 const main = async () => {
-    const colorsFile = await fetch("./data/colornames.json");
+    const colorsFile = await fetch("https://data.colors.liosorg.com/colornames.json");
     const colorsData = await colorsFile.json();
 
     generatePalettes(liosGetRandomItems(colorsData, 10), document.querySelector(".home-color-showcase-1"));
