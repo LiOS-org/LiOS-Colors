@@ -57,16 +57,19 @@ export const generatePalettes = (data, parent) => {
         parent.appendChild(colorPalette);
     });
 };
-export const containerAddButtons = (container) => {
+export const containerAddButtons = async (container) => {
     const palettes = container.querySelectorAll(".color-palette");
-    palettes.forEach((palette) => {
+    palettes.forEach(async (palette) => {
         const copyBlock = palette.querySelector(".palettes-button-container");
         const hex = copyBlock.querySelector(".palette-hex .palettes-color-value span").innerText;
         const translucentColor = copyBlock.querySelector(".palette-translucent-color .palettes-color-value span").innerText;
-        palettesAddButtons(palette, hex, translucentColor, hsl, srgb, oklch);
+        const hsl = copyBlock.querySelector(".palette-hsl .palettes-color-value span").innerText;
+        const oklch = copyBlock.querySelector(".palette-oklch .palettes-color-value span").innerText;
+        const srgb = copyBlock.querySelector(".palette-srgb .palettes-color-value span").innerText;
+        await palettesAddButtons(palette, hex, translucentColor, hsl, srgb, oklch);
     });
 };
-export const palettesAddButtons = (palette, hex, translucentColor, hsl, srgb, oklch) => {
+export const palettesAddButtons = async (palette, hex, translucentColor, hsl, srgb, oklch) => {
     // Copy Hex
     const hexButton = palette.querySelector(".palettes-button.palette-hex");
     hexButton.addEventListener("click", async () => {

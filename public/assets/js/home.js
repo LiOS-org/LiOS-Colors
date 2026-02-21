@@ -2,11 +2,21 @@ import { generatePalettes } from "./tools/generatePalettes.js"
 import { liosGetRandomItems } from "../../LiOS-Web-Utils/liosWebUtils.js";
 
 const main = async () => {
-    const colorsFile = await fetch("https://data.colors.liosorg.com/colornames.json");
-    const colorsData = await colorsFile.json();
+    const manifestFile = await fetch("https://data.colors.liosorg.com/colors/manifest.json");
+    const manifest = await manifestFile.json();
+    const colorDataUrl = "https://data.colors.liosorg.com/"
 
-    generatePalettes(liosGetRandomItems(colorsData, 10), document.querySelector(".home-color-showcase-1"));
-    generatePalettes(liosGetRandomItems(colorsData, 10), document.querySelector(".home-color-showcase-2"));
+    const randomFragment1 = Math.floor(Math.random() * (manifest.meta.totalFragments - 1) + 1);
+    const randomFragment2 = Math.floor(Math.random() * (manifest.meta.totalFragments - 1) + 1);
+
+    const randomColorFile1 = await fetch(`${colorDataUrl}colors/${manifest.fragments[randomFragment1].file}`);
+    const randomColorFile2 = await fetch(`${colorDataUrl}colors/${manifest.fragments[randomFragment2].file}`);
+
+    const randomColorData1 = await randomColorFile1.json();
+    const randomColorData2 = await randomColorFile2.json();
+
+    generatePalettes(liosGetRandomItems(randomColorData1, 10), document.querySelector(".home-color-showcase-1"));
+    generatePalettes(liosGetRandomItems(randomColorData2, 10), document.querySelector(".home-color-showcase-2"));
 
     // Smooth infinite marquee-style carousel
     const autoCarousel = (track, speed = 0.35, direction) => {

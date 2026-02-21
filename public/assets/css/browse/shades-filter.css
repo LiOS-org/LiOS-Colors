@@ -1,0 +1,31 @@
+.browse-shades-filter{
+    --background:var(--frosted-color-2);
+    background: var(--background);
+    border: 2px outset var(--background);
+    width: 90%;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.shades-filter-buttons-container{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.shades-filter-button{
+    width: 50px;
+    height: 50px;
+    border-radius: 100vh;
+    display: flex;
+    padding: 2px;
+    --background:var(--frosted-color-1);
+    background: var(--background);
+    border: 2px inset var(--background);
+    &:hover{
+        border-style: outset;
+        cursor: pointer;
+    };
+}
