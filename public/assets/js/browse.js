@@ -85,12 +85,23 @@ const main = async () => {
     // 
 };
 // 
+// Inject Translucent Colors
+const translucentColors = async() => {
+    const file = "/dist/translucent_colors.css"
+
+    const link = document.createElement("link");
+    link.setAttribute("rel", "stylesheet");
+    link.setAttribute("href", file);
+
+    document.head.appendChild(link);
+
+}
+// 
 // Loader
 const hideLoader = (async () => {
     const loader = document.querySelector(".hero-loader");
 
     await main();
-
     loader.parentElement.removeChild(loader);
 });
 // 
