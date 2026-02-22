@@ -18,18 +18,18 @@
 ### Using @import method:
 
 ```css
-@import url("https://colors.liosorg.com/dist/translucent_colors.css");
+@import url("https://data.colors.liosorg.com/translucent-colors.css");
 ```
 
 ### Using git submodule add:
 
 ```bash
-git submodule add https://github.com/LiOS-org/LiOS-Colors.git
+git submodule add https://github.com/LiOS-org/LiOS-Colors-Data.git
 ```
 After submodule is added import it to your main CSS file:
 
 ```css
-@import url("${path-to-LiOS-Colors}/dist/translucent_colors.css");
+@import url("${path-to-LiOS-Colors-Data}/translucent-colors.css");
 ```
 
 ## Usage
