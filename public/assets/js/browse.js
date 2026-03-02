@@ -8,6 +8,8 @@ let fragments;
 let palettesContainer;
 let palettesContainerStateManager;
 let pickFromBag;
+const loader = document.querySelector(".hero-loader");
+const scrollToTop = document.querySelector(".scroll-to-top-pebble");
 // 
 // Main Function
 const main = async () => {
@@ -54,8 +56,8 @@ const main = async () => {
     };
     await initializeFirstBatch();
     // 
-
-    window.addEventListener("scroll", async () => {
+    // Infinite Scroll
+    const infiniteScrollLogic = async () => {
         const viewportHeight = window.innerHeight;
         const scrollHeight = document.documentElement.scrollHeight;
 
@@ -65,44 +67,61 @@ const main = async () => {
             for (let i = 0; i < batchSize; i++) {
                 batch.push(pickFromBag());
             }
+            window.removeEventListener("scroll", infiniteScrollLogic);
 
-            // Implement virtualDom.update() first 
-            // await generatePalettes(batch);
+            loader.style.display = "flex";
+
+            for (const fragment of batch) {
+                const colorFile = await fetch(`https://data.colors.liosorg.com/colors/fragment-${String(fragment)}.json`);
+                const colorData = await colorFile.json()
+                const randomizedColorData = webUtils.array.randomize(colorData);
+                
+                await generatePalettes(randomizedColorData, "root");
+                palettesContainer.update();
+            };
+
+            loader.style.display = "none";
+
+            window.addEventListener("scroll", infiniteScrollLogic);
         };
-    });
+    };
+    window.addEventListener("scroll", infiniteScrollLogic);
 
     palettesContainer.render();
+    // 
+
     // Init Shades Filter
     await initShades();
     // 
     // Reset Button
     const resetButton = document.querySelector(".reset-pebble");
-    resetButton.addEventListener("click", () => {
-        palettesContainerStateManager.switchState("default");
-        palettesContainer.render();
+    resetButton.addEventListener("click", async () => {
+        await palettesContainerStateManager.switchState("default");
         resetButton.style.display = "none";
     });
     // 
 };
 // 
-// Inject Translucent Colors
-const translucentColors = async() => {
-    const file = "/dist/translucent_colors.css"
-
-    const link = document.createElement("link");
-    link.setAttribute("rel", "stylesheet");
-    link.setAttribute("href", file);
-
-    document.head.appendChild(link);
-
-}
-// 
 // Loader
 const hideLoader = (async () => {
-    const loader = document.querySelector(".hero-loader");
 
     await main();
-    loader.parentElement.removeChild(loader);
+    loader.style.display = "none";
+});
+// 
+// Scroll To Top
+window.addEventListener("scroll", () => {
+    if (window.scrollY >= "1000") {
+        scrollToTop.style.display = "flex";
+    } else if (window.screenY < "1000") {
+        scrollToTop.style.display = "none";
+    };
+});
+scrollToTop.addEventListener("click", () => {
+    window.scroll({
+        top: "100px",
+        behavior: "smooth",
+    });
 });
 // 
 await hideLoader();

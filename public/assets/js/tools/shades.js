@@ -10,6 +10,7 @@ export const initShades = async () => {
 
     const shadesFilter = await shadesFilterContainer.newChild();
     shadesFilter.classList("lios-cards-container", "shades-filter-buttons-container");
+    const generatedShades = new Set();
     const shadesBaseUrl = "https://data.colors.liosorg.com/shades/";
     const shadesMap = {
         "Violet": {
@@ -64,14 +65,17 @@ export const initShades = async () => {
         shadeButton.classList("shades-filter-button", "lios-frosted-glass");
         palettesContainerStateManager.newState(shadeName);
         shadeButton.eventListner.add("click", async () => {
-            palettesContainerStateManager.switchState(shadeName);
-
-            await generatePalettes(colorData, "root");
+            const loader = document.querySelector(".hero-loader");
+            loader.style.display = "flex";
+            if (!generatedShades.has(shadeName)) {
+                await generatePalettes(colorData, "root", shadeName);
+                generatedShades.add(shadeName);
+            }
             resetButton.style.display = "flex";
-
-            palettesContainer.render();
-
-        })
+            await palettesContainerStateManager.switchState(shadeName);
+            
+            loader.style.display = "none";
+        });
         shadeButton.appendTo(shadesFilter);
     }
     shadesFilter.classList("shades-filter-buttons-container");

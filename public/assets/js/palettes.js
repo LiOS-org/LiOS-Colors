@@ -1,9 +1,9 @@
 import { webUtils } from "../../LiOS-Web-Utils/liosWebUtils.js";
 import { fragments as fragmentFile,palettesContainer } from "./browse.js";
 
-export const generatePalettes = async (colorData, location) => {
+export const generatePalettes = async (colorData, location,state) => {
     for (const palette of colorData) {
-        const card = await palettesContainer.newChild();
+        const card = await palettesContainer.newChild("div",state);
         card.classList("lios-card", "lios-frosted-glass", "color-palette");
         const hex = palette.hex;
         const name = palette.name;
@@ -68,6 +68,6 @@ export const generatePalettes = async (colorData, location) => {
 
             
             
-        card.appendTo(location);
+        card.appendTo(location, state);
     };
 };
