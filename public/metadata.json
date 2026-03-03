@@ -22,6 +22,11 @@
             "for" : "Lucid Icons",
             "license" : "ISC License",
             "copy" : "https://github.com/lucide-icons/lucide?tab=License-1-ov-file"
+        },
+        {
+            "for":"LiOS Colors Data",
+            "license":"Apache License 2.0",
+            "copy":"https://raw.githubusercontent.com/LiOS-org/LiOS-Colors-Data/refs/heads/main/LICENSE"
         }
     ],
     "cta" : {

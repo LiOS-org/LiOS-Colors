@@ -3,17 +3,30 @@
     background: var(--background);
     border: 2px outset var(--background);
     width: 90%;
+    border-radius: 15px;
     display: flex;
     justify-self: center;
     flex-direction: column;
-    flex-wrap: wrap;
+    position: sticky;
+    top: 15px;
+    z-index: 2;
+    transition: transform 0.4s ease, border-radius 0.4s ease,width 0.4s ease;
+    transform-origin: center;
+    will-change: transform;
+    overflow-x: auto;
 }
+.browse-shades-filter-retracted {
+    width: fit-content;
+    max-width: 90%;
+    border-radius: 100vh;
+}                                                                    
 .shades-filter-buttons-container{
     display: flex;
     flex-direction: row;
     gap: 5px;
-    flex-wrap: wrap;
     justify-content: center;
+    align-self: center;
+    width: max-content;
 }
 .shades-filter-button{
     width: 50px;

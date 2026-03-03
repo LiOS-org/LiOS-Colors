@@ -1,5 +1,6 @@
 import { liosOpen } from "../../../LiOS-Open/liosOpen.js";
-import { palettesContainer, palettesContainerStateManager } from "../browse.js";
+import { webUtils } from "../../../LiOS-Web-Utils/liosWebUtils.js";
+import { infiniteScrollLogic, palettesContainer, palettesContainerStateManager } from "../browse.js";
 import { generatePalettes } from "../palettes.js";
 
 export const initShades = async () => {
@@ -65,10 +66,11 @@ export const initShades = async () => {
         shadeButton.classList("shades-filter-button", "lios-frosted-glass");
         palettesContainerStateManager.newState(shadeName);
         shadeButton.eventListner.add("click", async () => {
+            window.removeEventListener("scroll", infiniteScrollLogic);
             const loader = document.querySelector(".hero-loader");
             loader.style.display = "flex";
             if (!generatedShades.has(shadeName)) {
-                await generatePalettes(colorData, "root", shadeName);
+                await generatePalettes(webUtils.array.randomize(colorData), "root", shadeName);
                 generatedShades.add(shadeName);
             }
             resetButton.style.display = "flex";
