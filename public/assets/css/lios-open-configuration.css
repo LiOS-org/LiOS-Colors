@@ -17,11 +17,11 @@
     left: 0;
     width: 100%;       
     height: 100%;      
-    background-image: url(../favicon/favicon.svg);
+    background-image: url(../favicon/favicon-loader.svg);
     background-size: cover;
     background-position: center;
     transform-origin: center;
-    transform: rotate(-45deg);
+    /* transform: rotate(-45deg); */
 }
 /* Browse */
 .browse-load-more-button{

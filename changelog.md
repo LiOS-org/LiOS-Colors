@@ -1,4 +1,13 @@
-# 3.1.0
+## 3.2.0
+
+### Changes & Improvements
+
+- Updated `LiOS-Open` to latest version.
+- Updated `metadata` to follow the latest metadata schema.
+- Simplified rendering
+- Temprorily disbaled `about` window
+
+## 3.1.0
 
 - Removed duplicate color.
 - Added support for 3 new color spaces (Using ColorJS);
@@ -7,17 +16,17 @@
   - OKLCH
 - Now `LiOS-Colors` fetches data directly from `LiOS-Colors-Data` to make sure color data is always up-to-date.
 
-# 3.0.0 (Eastern Desert)
+## 3.0.0 (Eastern Desert)
 
 
 > Design update inspired by warm, mineral desert tones.
 
-## New Features
+### New Features
 
 - UI Overhaul
 - landing page
 
-## Changes & Improvements
+### Changes & Improvements
 
 - Full rewrite
 - Removed all types of filter(cause they were inaccurate and will be added later)

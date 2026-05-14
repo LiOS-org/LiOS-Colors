@@ -10,7 +10,6 @@
     --background:var(--frosted-color-2);
     background: var(--background);
     border: 2px outset var(--background);
-    color: hsl(144.03474303143685,96.45118943812521,25.87929717207743);
 }
 .palette-color{
     display: flex;
@@ -27,7 +26,7 @@
     padding: 5px;
     border-radius: 5px;
     gap: 2px;
-    --background:var(--frosted-color-1);
+    --background: var(--color-1);
     background: var(--background);
     border: 2px inset var(--background);
     justify-content: space-between;

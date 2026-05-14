@@ -17,7 +17,7 @@
     size: 1/1;
     width: 25vw;
 }
-.hero-desc,.home-usage-card{
+.hero-desc,.installation-usage-card{
     color: var(--color-4);
     margin-top: 15px;
     border-radius: 15px;

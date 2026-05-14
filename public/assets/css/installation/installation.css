@@ -1,0 +1,21 @@
+.installation-usage-card{
+    text-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    flex: 1;
+    color: var(--color-3);
+
+    & li{
+        font-weight: bold;
+        font-size: 16px;
+    }
+}
+.installation-usage-card pre{
+    text-wrap: wrap;
+}
+.installation-usage-buttons{
+    display: flex;
+    margin-top: 15px;
+    justify-self: center;
+}
