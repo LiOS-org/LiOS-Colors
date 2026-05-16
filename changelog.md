@@ -1,3 +1,15 @@
+## 3.2.1
+
+## New Features
+
+- Reimplemented Shades filter
+
+### Changes & Improvements
+
+- Fixed the `browse.js` loader and search state issues that could break browsing.
+- Removed redundant browse helper files after consolidating the logic.
+- Fixed alignment issues on home screen
+
 ## 3.2.0
 
 ### Changes & Improvements

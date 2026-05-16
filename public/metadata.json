@@ -3,8 +3,8 @@
     "name": "LiOS Colors",
     "description": "LiOS-Colors is a browsable library of beautiful colors, it's main aim is to provide translucent colors for UI design. LiOS-Colors is a part of the LiOS-Org and is based on data from meodai/color-names.",
     "version": {
-        "number": "3.2.0",
-        "code": 3
+        "number": "3.2.1",
+        "code": 4
     },
     "github": "https://github.com/LiOS-Org/LiOS-Colors",
     "license": {

@@ -46,6 +46,27 @@ export const components = {
             
             return palette;
         }
+        this.shadeButton = function (value) {
+            const button = this.child("div").style({
+                "display": "inline-flex",
+                "width": "50px",
+                "height": "50px",
+                "border-width": "2px",
+                "border-style": "inset",
+                "background": value,
+                "border-radius": "100vh",
+                "cursor": "pointer"
+            }).class.add("shades-button");
+            button.on("click", () => {
+                button.parent().getElement().querySelectorAll(".active").forEach((button) => {
+                    button.classList.remove("active")
+                })
+                if (!button.getElement().classList.contains("active")) {
+                    button.class.add("active");
+                }
+            });
+            return button;
+        }
         return this;
     },
     metadata: {

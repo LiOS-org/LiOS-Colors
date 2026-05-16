@@ -25,3 +25,9 @@
     size: 1/1;
     width: 120px;
 }
+.shades-button{
+    border-color: white;
+}
+.shades-button.active{
+    border-color: red;
+}
